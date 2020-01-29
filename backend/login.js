@@ -39,15 +39,16 @@ rutasAPI.route('/login').post((req, res) => {
 
     Usuario.findOne({email: correo}, (err, user) => {
         console.log(user);
-        if(err){
-            res.json(err);
+        if(user.password === password){
+            console.log('Bienvenido');
+            res.json({
+                mensaje: 'ok'
+            })
         } else {
-            res.json(user);
+            console.log('El email o la contraseña con incorrectos');
+            res.json(err)
         }
     });
-
-    
 })
-
 
 app.listen(PORT, () => console.log(`Servidor activo ${PORT}`));

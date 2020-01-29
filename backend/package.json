@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "0.0.1",
   "description": "Backend Applergic",
-  "main": "login.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon login.js"
   },
