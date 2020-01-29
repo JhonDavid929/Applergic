@@ -38,3 +38,14 @@ function recibirDatosRegistroPost(req, res){
 
 }
 rutasAPI.route("/registro").post(recibirDatosRegistroPost)
+
+rutasAPI.route("/").get(function(reqPeticonHttp, resRespuestaHttp){
+    Usuario.find(function(err, colecionUsuarios){
+        if(err){
+            console.log(err);
+        }else{
+            
+            resRespuestaHttp.json(colecionUsuarios)
+        }
+    })
+})
