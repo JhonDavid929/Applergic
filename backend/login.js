@@ -17,21 +17,6 @@ rutasAPI.route('/').get((req,res) => {
    console.log("API FUNCIONANDO!");
 });
 
-//CREAR USUARIO JAIME
-// rutasAPI.route('/registro').post((req, res) => {
-//     let nuevoUsuario = new Usuario(req.body);
-
-//     nuevoUsuario.save().then((usuario) => {
-//         console.log('Registrado');
-//         res.status(200).json({
-//             'usuario': 'Creado satisfactoriamente'
-//         })
-//     }).catch((err) => {
-//         console.log('Falloooo');
-//         res.status(400).send('El registro ha fallado');
-//     });
-//     console.log('La request ha sido procesada');
-// })
 
 rutasAPI.route('/login').post((req, res) => {
     let correo = req.body.email;
