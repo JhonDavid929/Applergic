@@ -1,0 +1,35 @@
+.imagen {
+    width: 375pt;
+    height: 249pt;
+}
+
+.cabecera {
+    color: rgb(rgb 7 15 21);
+    size: 20pt;
+    letter-spacing: 0.0pt;
+    font-family: 'Montserrat-Bold';
+}
+
+.text {
+    color: rgb(rgb 7 15 21);
+    size: 16pt;
+    width: 248pt;
+    height: 52pt;
+}
+
+.campo {
+    border: solid black 1px;
+}
+
+.div-boton {
+    width: 100%;
+}
+
+.boton {
+    background-color: #26c7dc;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: 8pt;
+    
+}
