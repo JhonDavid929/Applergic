@@ -1,0 +1,10 @@
+POST http://127.0.0.1:4000/api/usuarios/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "jhon@jhon.com",
+    "password": "jhon"
+}
+
+###
+
