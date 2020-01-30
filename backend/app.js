@@ -8,6 +8,7 @@ const Usuario = require('./modelos/Usuario');
 // const login = require('./login');
 // const usu = require('./crearusuario');
 const mogoose = require('mongoose');
+const Alimento = require("./modelos/Alimento");
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -36,9 +37,45 @@ function recibirDatosRegistroPost(req, res){
 
 
 }
+//CREAR ALIMENTOS.. Esta es la funcion para crear los alimento en la base de datos(moogo)
+function recibirDatosDeAlimentoPost(req, res){
+    console.log("La peticion Http esta siendo procesada");
+    let nuevoAlimento = new Alimento(req.body)
+    let procesadaGuardado = nuevoAlimento.save()
+    procesadaGuardado.then(Alimento =>{
+        console.log("Alimento registrado en base de datos ");
+
+        res.status(200).json({"alimento": "CREADO CON EXITO (Applergic)"   
+
+        })
+    }) 
+    procesadaGuardado.catch( err => {
+        console.log("EL ALIMENTO NO HA SIDO GUARDADO")
+        res.status(400).send("EL REGISTRO DEL ALIMENTO HA FALLADO")
+    })
+    console.log("la peticion HTTP ha sido PROCESADA");
+
+}   
+rutasAPI.route("/alimento").post(recibirDatosDeAlimentoPost)
+
+//SACAR Alimentos (metodo get para ver los Alimentos que estan en la BBDD)
+rutasAPI.route("/alimento").get(function(reqPeticonHttp, resRespuestaHttp){
+    Alimento.find(function(err, colecionAlimentos){
+        if(err){
+            console.log(err);
+        }else{
+            
+            resRespuestaHttp.json(colecionAlimentos)
+        }
+    })
+})
+
+
+
+
 rutasAPI.route("/registro").post(recibirDatosRegistroPost)
 
-//SACAR USUARIOS
+//SACAR USUARIOS (metodo get para ver los Usuarios que estan en la BBDD)
 rutasAPI.route("/").get(function(reqPeticonHttp, resRespuestaHttp){
     Usuario.find(function(err, colecionUsuarios){
         if(err){
@@ -50,7 +87,7 @@ rutasAPI.route("/").get(function(reqPeticonHttp, resRespuestaHttp){
     })
 })
 
-//LOG IN
+//LOG IN (Ruta)
 rutasAPI.route('/login').post((req, res) => {
     let correo = req.body.email;
     let password = req.body.password;

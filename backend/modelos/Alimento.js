@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 let Alimento = new Schema({
     nombre: {
-        nombre: String,
+        type: String,
     }
 })
 
