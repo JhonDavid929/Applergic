@@ -5,8 +5,6 @@ const app = express();
 const PORT = 4000;
 const db = require('./config/bbdd');
 const Usuario = require('./modelos/Usuario');
-// const login = require('./login');
-// const usu = require('./crearusuario');
 const mogoose = require('mongoose');
 const Alimento = require("./modelos/Alimento");
 
@@ -14,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const rutasAPI = express.Router();
-//http://127.0.0.1:4000/api/usuarios
+
 app.use('/api/usuarios', rutasAPI);
 
 //CREAR USUARIOS
@@ -34,9 +32,9 @@ function recibirDatosRegistroPost(req, res){
         res.status(400).send("EL REGISTRO HA FALLADO")
     })
     console.log("La peticion HTTP ha sido procesada");
-
-
 }
+rutasAPI.route("/registro").post(recibirDatosRegistroPost)
+
 //CREAR ALIMENTOS.. Esta es la funcion para crear los alimento en la base de datos(moogo)
 function recibirDatosDeAlimentoPost(req, res){
     console.log("La peticion Http esta siendo procesada");
@@ -54,7 +52,6 @@ function recibirDatosDeAlimentoPost(req, res){
         res.status(400).send("EL REGISTRO DEL ALIMENTO HA FALLADO")
     })
     console.log("la peticion HTTP ha sido PROCESADA");
-
 }   
 rutasAPI.route("/alimento").post(recibirDatosDeAlimentoPost)
 
@@ -70,11 +67,6 @@ rutasAPI.route("/alimento").get(function(reqPeticonHttp, resRespuestaHttp){
     })
 })
 
-
-
-
-rutasAPI.route("/registro").post(recibirDatosRegistroPost)
-
 //SACAR USUARIOS (metodo get para ver los Usuarios que estan en la BBDD)
 rutasAPI.route("/").get(function(reqPeticonHttp, resRespuestaHttp){
     Usuario.find(function(err, colecionUsuarios){
@@ -87,7 +79,7 @@ rutasAPI.route("/").get(function(reqPeticonHttp, resRespuestaHttp){
     })
 })
 
-//LOG IN (Ruta)
+//LOG IN USUARIOS(Ruta)
 rutasAPI.route('/login').post((req, res) => {
     let correo = req.body.email;
     let password = req.body.password;
@@ -104,6 +96,22 @@ rutasAPI.route('/login').post((req, res) => {
             res.json(err)
         }
     });
+})
+
+//SACAR ALIMENTOS POR LETRA
+rutasAPI.route('/alimentos/:letra').get((req, res) => {
+    let letra = req.params.letra;
+    console.log(letra)
+
+    Alimento.find({nombre: new RegExp(`^${letra}`, "gi")}, (err, alimentos) => {
+        if(err){
+            console.log(err);
+            res.json(err);
+        }else{
+            console.log(alimentos);
+            res.json(alimentos);
+        }
+    })
 })
 
 app.listen(PORT, () => console.log(`Servidor activo ${PORT}`));
