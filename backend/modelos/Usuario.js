@@ -13,6 +13,12 @@ let Usuario = new Schema({
     },
     password: {
         type: String,
+    },
+    imagen: {
+        type: String,
+    },
+    alimentos:{
+        type: Array,
     }
 });
 
