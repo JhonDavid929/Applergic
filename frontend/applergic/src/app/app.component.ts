@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
+import { IntroduccionComponent } from './componentes/introduccion/introduccion.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 
 @Component({
   selector: 'app-root',
-  template:`
-  
-    <div>
-      <app-login></app-login>
-    </div>`,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 

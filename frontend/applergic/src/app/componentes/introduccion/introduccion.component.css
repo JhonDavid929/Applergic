@@ -1,0 +1,24 @@
+@import './grid.css';
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.intro img{
+
+}
+.img-intro{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    /* background-image: url('../../../assets/imagenes/logo-inicio.png');
+    background-size: cover; */
+}
+
+h1{
+    color: #a8a8a8;
+}
+p{
+    color: #ccc;
+}
