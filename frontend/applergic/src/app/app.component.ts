@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   template:`
@@ -9,6 +10,7 @@ import { Component } from '@angular/core';
     </div>`,
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'applergic';
 }

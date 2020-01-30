@@ -1,35 +1,80 @@
 .imagen {
-    width: 375pt;
-    height: 249pt;
+    object-fit: scale-down;
 }
 
 .cabecera {
     color: rgb(rgb 7 15 21);
-    size: 20pt;
+    size: 10pt;
     letter-spacing: 0.0pt;
-    font-family: 'Montserrat-Bold';
+    font-family: 'Montserrat, Bold';
+    size: 24.0;
+    letter-spacing: 0.3pt;
+    margin-left: 5vw;
+    margin-top: 1.2em;
 }
 
-.text {
+.texto {
+    font-family: 'Montserrat, Bold';
     color: rgb(rgb 7 15 21);
     size: 16pt;
-    width: 248pt;
-    height: 52pt;
+    margin-right: 10em;
+    letter-spacing: 0.5pt;
+    margin-left: 5vw;
 }
 
 .campo {
-    border: solid black 1px;
+    margin-top: 1.8em;
+    width: auto fill;
+    height: 30pt;
+    margin-left: 5vw;
+    margin-right: 5vw;    
+}
+
+.margen {
+    border-bottom:solid lightgrey 1px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.secBotones {
+    padding-top: 1.5em;
 }
 
 .div-boton {
     width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;    
 }
 
 .boton {
     background-color: #26c7dc;
     width: 90vw;
+    height: 39pt;
     margin-left: 5vw;
     margin-right: 5vw;
     border-radius: 8pt;
+    border-style: none;  
+    font-family: 'Montserrat, Bold'; 
+    font-size: x-large;
+    color: white;
+    letter-spacing: 1pt;
     
+}
+
+.enlace_1 {
+    margin-left: 5vw;
+    color:  #26c7dc;
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+}
+
+.href{
+    text-align: center;
+    color:  #26c7dc;
+}
+
+.enlace_2 {
+    color:  #26c7dc;
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
 }
