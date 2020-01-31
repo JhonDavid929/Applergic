@@ -1,0 +1,35 @@
+.main-content {
+    position: absolute;
+}
+
+.logo {
+    display: block;
+    margin: 50px auto;
+}
+
+.main-home-button {
+    width: 325px;
+    height: 50px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.button-img {
+    padding-right: 20px;
+}
+
+.button-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-paragrapgh {
+    color: rgb(118,118,118);
+    text-align: center;
+    position: relative;
+    top: -11px;
+}

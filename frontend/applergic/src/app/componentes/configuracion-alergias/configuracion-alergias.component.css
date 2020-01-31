@@ -1,0 +1,75 @@
+.main-container {
+    position: absolute;
+}
+
+.main-title {
+    color: rgb(7, 15, 21);
+    text-align: center;
+}
+
+.main-paragraph {
+    width: 321px;
+    height: 73px;
+    text-align: center;
+    color: rgb(89, 95, 101);
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.alphabet {
+    widows: 295px;
+    height: 295px;
+    border: 1.5px solid rgb(230, 230, 230);
+    margin: 20px 30px 30px 30px;
+    padding: 10px;
+}
+
+.alphabet-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter-link {
+    width: 22px;
+    height: 22px;
+    background-color: rgb(168, 168, 168);
+    margin: 15px;
+    padding: 10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size:18px;
+    /*text-transform: uppercase;*/
+    float:left;
+}
+
+.letter-link a {
+    color: rgb(255, 255, 255);
+    text-decoration:none;
+    padding: 5px;
+}
+
+.panel-text {
+    position: relative;
+    bottom: 200px;
+    left: 145px;
+    width: 93px;
+    height: 15px;
+    color: rgb(89, 95, 101);
+    font-size: 13px;
+}
+
+.accept-button {
+    width: 325px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgb(38, 199, 220);
+    color: rgb(255, 255, 255);
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+}

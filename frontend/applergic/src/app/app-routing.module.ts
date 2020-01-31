@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IntroduccionComponent } from './componentes/introduccion/introduccion.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { ConfiguracionAlergiasComponent } from './componentes/configuracion-alergias/configuracion-alergias.component';
 import { CrearEmergenciaComponent } from './componentes/crear-emergencia/crear-emergencia.component';
 
 const routes: Routes = [
@@ -20,8 +22,17 @@ const routes: Routes = [
     component: IntroduccionComponent
   },
   {
-    path: "registro",
+    path: 'registro',
     component: CrearUsuarioComponent
+  },
+  {
+    path: 'alergias',
+    component:  ConfiguracionAlergiasComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  }];
   },
   {
     path: "emergencia", 
