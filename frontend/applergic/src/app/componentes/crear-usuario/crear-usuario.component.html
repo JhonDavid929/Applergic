@@ -1,18 +1,21 @@
 
 <div>
   <div class="divVolver">
-    <input type="button" value="< Volver" class="volver"/>
-    <img src="../../../assets/casa.png" alt="home" class="iconHome">
+    <a [routerLink]="['/login']" class="volver">
+      <img src="../../../assets/imagenes/volver.png" alt="< Volver">
+    </a>
+    <img src="../../../assets/imagenes/casa.png" alt="home" class="iconHome">
   </div>
   <h1>{{titulo}}</h1>
   <div class="divSubeFoto">
     <!--<img src="../../../asset/icono-sube-foto.svg" alt="" />  -->
   </div>
   <form  #formRegistro="ngForm" class="formReg">
-      <input type="text" placeholder="Nombre completo" class="input" name="nombre" [(ngModel)]="usuarioNuevo.nombre" (blur)="alPerderFoco()" required/>
-      
+      <input type="text" placeholder="Nombre completo" class="input" required name="nombre" #nombre="ngModel" [(ngModel)]="usuarioNuevo.nombre" (blur)="alPerderFoco()" ngModel pattern="[a-zA-Z ]*"/>
+
+
       <input type="email" placeholder="Direccion email" class="input" name="email" [(ngModel)]="usuarioNuevo.email" required/>
-      <input type="text" placeholder="Movil" class="input" name="movil" name="movil" [(ngModel)]="usuarioNuevo.movil" required/>
+      <input type="text" placeholder="Movil" class="input" name="movil" name="movil" [(ngModel)]="usuarioNuevo.movil" required />
       <input type="password" placeholder="Password" class="input" name="password " [(ngModel)]="usuarioNuevo.password" required/>
 
 
