@@ -35,6 +35,25 @@ function recibirDatosRegistroPost(req, res){
 }
 rutasAPI.route("/registro").post(recibirDatosRegistroPost)
 
+//Esta es la funccion de EDITAR Usuario//
+rutasAPI.route("/editar/:id").put(function(req,res){
+    let editarUsuario = new Usuario(req.body);
+    editarUsuario._id = req.params.id;
+        Usuario.findById(editarUsuario._id, function(err,user){
+        console.log("Usuario EDITADO")
+        for(const prop in req.body){
+            user[prop] = req.body[prop];
+        }
+        console.log(user)
+        console.log(req.body)
+        user.save();
+        res.json("FUE EDITADO"); // aqui se envia una respuesta JSON para que no se 
+        // que en un bucle el POSTMAN.,/
+        
+    }).then(res=>res).catch(err=>err)
+       
+});
+
 //CREAR ALIMENTOS.. Esta es la funcion para crear los alimento en la base de datos(moogo)
 function recibirDatosDeAlimentoPost(req, res){
     console.log("La peticion Http esta siendo procesada");
