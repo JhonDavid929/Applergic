@@ -1,0 +1,57 @@
+.divVolver{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+}
+.volver{
+  border: none;
+  font-size: .9em;
+  color: #26c7dc;
+  background-color: transparent;
+  margin: 1em 0;
+}
+.iconHome{
+  width: 1em;
+  height: 1em;
+}
+h1{
+  text-align: center;
+  margin-bottom: 1em;
+}
+.divSubeFoto{
+  background-color: #26c7dc;
+  width: 7em;
+  height: 7em;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.formReg{
+  margin-top: 2.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input{
+ width: 80vw;
+ padding: 1em 0;
+ font-family: Montserrat-Regular;
+ font-size: 1.2em;
+ border: 0;
+ border-bottom: 2px solid #C4C4C4;
+ color: #C4C4C4;
+ margin-bottom: 1em;
+}
+.buttonRegistrar{
+  width: 80vw;
+  background-color: #cccccc;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  padding: .7em;
+  border-radius: 8px;
+  margin-top: 2em;
+}
+.buttonRegistrar:disabled {
+  background-color: aqua;
+
+}

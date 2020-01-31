@@ -1,0 +1,21 @@
+
+<div>
+  <div class="divVolver">
+    <input type="button" value="< Volver" class="volver"/>
+    <img src="../../../assets/casa.png" alt="home" class="iconHome">
+  </div>
+  <h1>{{titulo}}</h1>
+  <div class="divSubeFoto">
+    <!--<img src="../../../asset/icono-sube-foto.svg" alt="" />  -->
+  </div>
+  <form  #formRegistro="ngForm" class="formReg">
+      <input type="text" placeholder="Nombre completo" class="input" name="nombre" [(ngModel)]="usuarioNuevo.nombre" (blur)="alPerderFoco()" required/>
+      
+      <input type="email" placeholder="Direccion email" class="input" name="email" [(ngModel)]="usuarioNuevo.email" required/>
+      <input type="text" placeholder="Movil" class="input" name="movil" name="movil" [(ngModel)]="usuarioNuevo.movil" required/>
+      <input type="password" placeholder="Password" class="input" name="password " [(ngModel)]="usuarioNuevo.password" required/>
+
+
+      <input type="button" value="Guardar perfil"  class="buttonRegistrar" (click)="onSubmit(formRegistro)" [disabled]="!formRegistro.valid" />
+  </form>
+</div>
