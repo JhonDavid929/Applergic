@@ -1,5 +1,3 @@
-@import './grid.css';
-
 .intro{
     display: flex;
     flex-direction: column;
