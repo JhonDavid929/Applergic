@@ -5,12 +5,26 @@
   padding: 0 1em;
 }
 .volver{
-  border: none;
   font-size: .9em;
-  color: #26c7dc;
-  background-color: transparent;
+  color: rgb(38, 199, 220);
+  text-decoration: none;
   margin: 1em 0;
 }
+.volver:hover {
+  cursor: pointer;
+}
+
+.back-arrow {
+  font-weight: lighter;
+  vertical-align: middle;
+  color: rgb(38, 199, 220);
+}
+
+.back-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .iconHome{
   width: 1em;
   height: 1em;
