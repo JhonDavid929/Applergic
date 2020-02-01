@@ -11,6 +11,8 @@ import { CrearEmergenciaComponent } from './componentes/crear-emergencia/crear-e
 import { IntroduccionComponent } from './componentes/introduccion/introduccion.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { ConfiguracionAlergiasComponent } from './componentes/configuracion-alergias/configuracion-alergias.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InicioComponent } from './componentes/inicio/inicio.component';
 
 
 @NgModule({
@@ -22,13 +24,15 @@ import { ConfiguracionAlergiasComponent } from './componentes/configuracion-aler
     CrearUsuarioComponent,
     CrearEmergenciaComponent,
     HomeComponent,
-    ConfiguracionAlergiasComponent
+    ConfiguracionAlergiasComponent,
+    InicioComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
     ],
 
   providers: [],

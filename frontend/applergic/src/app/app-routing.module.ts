@@ -6,12 +6,17 @@ import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario
 import { HomeComponent } from './componentes/home/home.component';
 import { ConfiguracionAlergiasComponent } from './componentes/configuracion-alergias/configuracion-alergias.component';
 import { CrearEmergenciaComponent } from './componentes/crear-emergencia/crear-emergencia.component';
+import { InicioComponent } from './componentes/inicio/inicio.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/intro',
+    redirectTo: '/inicio',
     pathMatch: 'full'
+  },
+  {
+    path: 'inicio',
+    component: InicioComponent
   },
   {
     path: 'login',
@@ -32,10 +37,9 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  }];
   },
   {
-    path: "emergencia", 
+    path: 'emergencia',
     component: CrearEmergenciaComponent
   }
 ];
