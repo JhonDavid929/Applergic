@@ -5,20 +5,20 @@
     <div class="texto">
       <p>Por favor, introduce tus datos para continuar.</p>
     </div>
-    <form class="form">
+    <form class="form" #formLogIn="ngForm" class="formReg" (submit)="logIn(formLogIn)">
       <div class="margen">
-        <input type="email" value="Dirección e.mail" class="campo"><br>
+        <input type="email" value="Dirección e.mail" class="campo" name="email" #email [(ngModel)]="usuarioLogin.email"><br>
       </div>
       <div class="margen">
-        <input type="password" value="Password" class="campo"><br>
+        <input type="password" value="Password" class="campo" name="password" #password [(ngModel)]="usuarioLogin.password"><br>
       </div>
       <div class="secBotones">
         <a href="" class="enlace_1" style="text-decoration:none" >¿Olvidaste tu contraseña?</a><br>
         <div class="div-boton">
-          <button class="boton" type="submit" name="Entrar">Entrar</button>
+          <input class="boton" type="submit" name="Entrar"/>
         </div>
         <div class="href">
-          <a href="" class="enlace_2" style="text-decoration:none">Crea tu cuenta aquí</a><br>
+          <a [routerLink]='["/registro"]' class="enlace_2" style="text-decoration:none">Crea tu cuenta aquí</a><br>
         </div>
       </div>
     </form>

@@ -18,6 +18,6 @@
       <input type="text" placeholder="Movil" class="input" #movil="ngModel" name="movil" name="movil" [(ngModel)]="usuarioNuevo.movil" required />
       <input type="password" placeholder="Password" #password="ngModel" class="input" name="password " [(ngModel)]="usuarioNuevo.password" required/>
 
-      <input type="submit" value="Guardar perfil"  class="buttonRegistrar"/>
+      <input type="submit" value="Guardar perfil"  class="buttonRegistrar" [disabled]="!formRegistro.valid"/>
   </form>
 </div>
