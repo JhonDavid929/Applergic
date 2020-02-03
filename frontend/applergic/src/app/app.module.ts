@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,8 +11,7 @@ import { CrearEmergenciaComponent } from './componentes/crear-emergencia/crear-e
 import { IntroduccionComponent } from './componentes/introduccion/introduccion.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { ConfiguracionAlergiasComponent } from './componentes/configuracion-alergias/configuracion-alergias.component';
-import { MensajeServicio } from './servicios/mensajeServicio';
-import { UsuarioServicio } from './servicios/usuarioServicio';
+
 
 @NgModule({
   declarations: [
@@ -30,11 +28,10 @@ import { UsuarioServicio } from './servicios/usuarioServicio';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    FormsModule
     ],
 
-  providers: [MensajeServicio, UsuarioServicio],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

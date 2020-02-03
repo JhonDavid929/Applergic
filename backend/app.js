@@ -100,11 +100,10 @@ rutasAPI.route("/").get(function(reqPeticonHttp, resRespuestaHttp){
 
 //LOG IN USUARIOS(Ruta)
 rutasAPI.route('/login').post((req, res) => {
-    let email = req.body.email;
+    let correo = req.body.email;
     let password = req.body.password;
-    console.log(password)
 
-    Usuario.findOne({email: email}, (err, user) => {
+    Usuario.findOne({email: correo}, (err, user) => {
         console.log(user);
         if(user.password === password){
             console.log('Bienvenido');

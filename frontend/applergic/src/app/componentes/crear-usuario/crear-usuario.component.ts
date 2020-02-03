@@ -1,9 +1,9 @@
-import { Component} from '@angular/core';
+import { Component/*, OnInit */} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Usuario } from '../../entidades/usuario';
-import { UsuarioServicio } from '../../servicios/usuarioServicio';
-import { log } from 'util';
-import { Observable } from 'rxjs';
+
+
+
 
 @Component({
   selector: 'crear-usuario',
@@ -17,24 +17,19 @@ export class CrearUsuarioComponent /*implements OnInit*/ {
   public usuarioNuevo: Usuario;
   valido: boolean;
 
-  constructor(private usuarioServicio: UsuarioServicio){
+  constructor(){
     this.valido = false;
-    this.usuarioNuevo = {
-      "nombre": "",
-      "email": "",
-      "movil": "",
-      "password": "",
-      "imagen": "",
-      "alimentos": [],
-      }
+    this.usuarioNuevo = new Usuario()
+    //this.usuarioNuevo.nombre = '';
+    //this.usuarioNuevo.email = '';
+    //this.usuarioNuevo.movil = '';
+    //this.usuarioNuevo.password = '';
   }
-
   onSubmit(form) {
-
-    this.usuarioServicio.crearUsuario(this.usuarioNuevo)
+    console.log("evento submit lanzado");
+    console.log(this.usuarioNuevo);
     form.reset();
   }
-
   alPerderFoco() {
     if ( typeof this.usuarioNuevo.nombre !== "undefined"
         && this.usuarioNuevo.nombre !== "") {
