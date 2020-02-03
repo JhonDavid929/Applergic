@@ -7,7 +7,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { ConfiguracionAlergiasComponent } from './componentes/configuracion-alergias/configuracion-alergias.component';
 import { CrearEmergenciaComponent } from './componentes/crear-emergencia/crear-emergencia.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
-import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.component'
+import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.component';
 
 const routes: Routes = [
   {
