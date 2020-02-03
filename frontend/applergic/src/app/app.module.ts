@@ -11,8 +11,8 @@ import { CrearEmergenciaComponent } from './componentes/crear-emergencia/crear-e
 import { IntroduccionComponent } from './componentes/introduccion/introduccion.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { ConfiguracionAlergiasComponent } from './componentes/configuracion-alergias/configuracion-alergias.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InicioComponent } from './componentes/inicio/inicio.component';
+import { MensajeServicio } from './servicios/mensajeServicio';
+import { UsuarioServicio } from './servicios/usuarioServicio';
 import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.component';
 
 
@@ -35,6 +35,7 @@ import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.co
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule
     ],
 
   providers: [],
