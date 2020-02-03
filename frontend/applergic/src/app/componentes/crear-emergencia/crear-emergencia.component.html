@@ -4,7 +4,9 @@
       <img class="back-arrow" src="assets/imagenes/navegacion/arrow-left.svg" alt="Volver">
       <span class="back-text">Volver</span>
     </a>
+    <span class="paginacion">3 de 4</span>
   </div>
+
   <h1>Vamos a añadir tu contacto en caso de emergencia.</h1>
   <p>Nos pondremos en contacto con tu persona de confianza y/o compañia de seguros en caso de emergencia</p>
   <form  #formRegistro="ngForm" class="formReg">
@@ -16,6 +18,7 @@
     <input type="text" placeholder="Compañia de seguros/Nº Póliza" class="input" name="compSeguros " [(ngModel)]="emergenciaNueva.password" required/>
 
 
-    <input type="button" value="Guardar emergencias"  class="buttonRegistrar" (click)="onSubmit(formRegistro)" [disabled]="!formRegistro.valid" />
+    <a routerLink="/alergias"><input type="button" value="Guardar emergencias"  class="buttonRegistrar" (click)="onSubmit(formRegistro)" [disabled]="!formRegistro.valid" /></a>
   </form>
+  <a routerLink="/alergias"><p class="saltaContacto">Registraré mi contacto en otro momento</p></a>
 </div>

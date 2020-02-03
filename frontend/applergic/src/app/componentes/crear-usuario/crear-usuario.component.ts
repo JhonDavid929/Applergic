@@ -25,21 +25,17 @@ export class CrearUsuarioComponent /*implements OnInit*/ {
     //this.usuarioNuevo.movil = '';
     //this.usuarioNuevo.password = '';
   }
-  onSubmit(form) {
+  onSubmit(form: NgForm) {
     console.log("evento submit lanzado");
     console.log(this.usuarioNuevo);
     form.reset();
   }
+
   alPerderFoco() {
     if ( typeof this.usuarioNuevo.nombre !== "undefined"
         && this.usuarioNuevo.nombre !== "") {
           this.valido = true;
         }
   }
-   
-  
-
-
-
 
 }

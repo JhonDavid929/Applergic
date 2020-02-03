@@ -10,6 +10,12 @@
   text-decoration: none;
   margin: 1em 0;
 }
+.paginacion{
+  font-size: .8em;
+  margin-right: 1.5em;
+  font-weight: 700;
+}
+
 .volver:hover {
   cursor: pointer;
 }
@@ -25,45 +31,32 @@
   vertical-align: middle;
 }
 
-.iconHome{
+.iconClose{
   width: 1.3em;
   height: 1.3em;
 }
-.paginacion{
-  font-size: .8em;
-  margin-right: 1.5em;
-  font-weight: 700;
-
-}
-
-h1{
-  text-align: center;
-  margin-bottom: 1em;
-}
-.divSubeFoto{
-  background-color: #26c7dc;
-  width: 7em;
-  height: 7em;
-  margin: 0 auto;
-  border-radius: 50%;
-}
-.formReg{
-  margin-top: 2.3em;
+.ok{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
 }
-.input{
- width: 85vw;
- padding: 1em 0;
- font-family: Montserrat-Regular;
- font-size: 1.2em;
- border: 0;
- border-bottom: 2px solid #C4C4C4;
- color: #C4C4C4;
- margin-bottom: 1em;
+.divTitulo{
+  display: flex;
+  justify-content: center;
 }
-.buttonRegistrar{
+h1{
+  width: 80vw;
+  text-align: center;
+  font-size: 1.6em;
+  margin-top: 1.5em;
+}
+.botonEscaneo{
+  margin-top: 4em;
+  display: flex;
+  justify-content: center;
+}
+
+input{
   width: 80vw;
   background-color: #26c7dc;
   color: #FFFFFF;
@@ -71,8 +64,4 @@ h1{
   padding: .7em;
   border-radius: 8px;
   margin-top: 2em;
-}
-.buttonRegistrar:disabled {
-  background-color: #cccccc;
-
 }

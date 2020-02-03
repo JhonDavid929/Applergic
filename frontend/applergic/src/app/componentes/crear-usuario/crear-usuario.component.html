@@ -4,7 +4,8 @@
     <a routerLink="/login" class="volver">
       <img class="back-arrow" src="assets/imagenes/navegacion/arrow-left.svg" alt="Volver">
       <span class="back-text">Volver</span>
-  </a>
+    </a>
+    <p class="paginacion">1 de 4</p>
     <img src="assets/imagenes/registro/home.png" alt="home" class="iconHome">
   </div>
   <h1>{{titulo}}</h1>
@@ -20,6 +21,6 @@
       <input type="password" placeholder="Password" class="input" name="password " [(ngModel)]="usuarioNuevo.password" required/>
 
 
-      <input type="button" value="Guardar perfil"  class="buttonRegistrar" (click)="onSubmit(formRegistro)" [disabled]="!formRegistro.valid" />
+      <a routerLink="/emergencia"><input type="button" value="Guardar perfil"  class="buttonRegistrar" (click)="onSubmit(formRegistro)" [disabled]="!formRegistro.valid" /></a>
   </form>
 </div>

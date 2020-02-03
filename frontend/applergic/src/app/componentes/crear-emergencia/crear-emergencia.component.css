@@ -1,6 +1,6 @@
 .divVolver{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 1em;
 }
@@ -25,6 +25,12 @@
 .back-text {
   display: inline-block;
   vertical-align: middle;
+}
+
+.paginacion{
+  font-size: .8em;
+  font-weight: 700;
+  margin-left: 6em;
 }
 
 .iconHome{
@@ -76,4 +82,13 @@ p{
 .buttonRegistrar:disabled {
   background-color: #cccccc;
 
+}
+a{
+  text-decoration: none;
+
+}
+.saltaContacto{
+  color: #26c7dc;
+  font-size: 12pt;
+  margin-top: 20pt;
 }
