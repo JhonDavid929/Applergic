@@ -1,7 +1,6 @@
 
 <div>
   <div class="divVolver">
-      <span class="back-text">Volver</span>
     <a routerLink="/login" class="volver">
       <img class="back-arrow" src="assets/imagenes/navegacion/arrow-left.svg" alt="Volver">
       <span class="back-text">Volver</span>
@@ -10,14 +9,16 @@
     <img src="assets/imagenes/registro/home.png" alt="home" class="iconHome">
   </div>
   <h1>{{titulo}}</h1>
-  <div class="divSubeFoto">
-  </div>
-  <form  #formRegistro="ngForm" class="formReg" (submit)="onSubmit(formRegistro)">
-      <input type="text" placeholder="Nombre completo" class="input" required name="nombre" #nombre="ngModel" [(ngModel)]="usuarioNuevo.nombre" (blur)="alPerderFoco()" ngModel pattern="[a-zA-Z ]*"/>
-      <input type="email" placeholder="Direccion email" #email="ngModel" class="input" name="email" [(ngModel)]="usuarioNuevo.email" required/>
-      <input type="text" placeholder="Movil" class="input" #movil="ngModel" name="movil" name="movil" [(ngModel)]="usuarioNuevo.movil" required />
-      <input type="password" placeholder="Password" #password="ngModel" class="input" name="password " [(ngModel)]="usuarioNuevo.password" required/>
-
-      <input type="submit" value="Guardar perfil"  class="buttonRegistrar" [disabled]="!formRegistro.valid"/>
+  
+  <form enctype="multipart/form-data" #formRegistro="ngForm" class="formReg" (submit)="onSubmit(formRegistro)">
+    <div class="imagenForm">
+      <input class="foto" type="file" name="imagen" #imagen="ngModel" [(ngModel)]="usuarioNuevo.imagen">
+      <span class="texto">Subir foto</span>
+    </div>
+    <input type="text" placeholder="Nombre completo" class="input" required name="nombre" #nombre="ngModel" [(ngModel)]="usuarioNuevo.nombre" (blur)="alPerderFoco()" ngModel pattern="[a-zA-Z ]*"/>
+    <input type="email" placeholder="Direccion email" #email="ngModel" class="input" name="email" [(ngModel)]="usuarioNuevo.email" required/>
+    <input type="text" placeholder="Movil" class="input" #movil="ngModel" name="movil" name="movil" [(ngModel)]="usuarioNuevo.movil" required />
+    <input type="password" placeholder="Password" #password="ngModel" class="input" name="password " [(ngModel)]="usuarioNuevo.password" required/>
+    <input type="submit" value="Guardar perfil"  class="buttonRegistrar" [disabled]="!formRegistro.valid"/>
   </form>
 </div>

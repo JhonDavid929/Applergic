@@ -5,6 +5,8 @@ const app = express();
 const db = require('../config/bbdd');
 const Usuario = require('../modelos/Usuario');
 const mogoose = require('mongoose');
+const multipart = require('connect-multiparty')
+const multipartMiddlware = multipart({uploadDir: './uploads'})
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -30,6 +32,35 @@ function recibirDatosRegistroPost(req, res){
     console.log("La peticion HTTP ha sido procesada");
 }
 rutasAPI.route("/registro").post(recibirDatosRegistroPost)
+
+//SUBIR IMAGEN
+function recibirImagen(req, res){
+    let id = req.params.id;
+    if(req.files){
+        let filesPath = req.files.imagen.path;
+        let fileSplit = filesPath.split('/')
+        let fileName = fileSplit[1];
+
+        Usuario.findByIdAndUpdate({_id: id}, {imagen: fileName}, (err, res) => {
+            console.log(res)
+            if(err){
+                res.json({
+                    mensaje: "No hay imagen"
+                })
+            }else{
+                res.json({
+                    imagen: res
+                })
+            }
+        })
+    }else{
+        return res.status(200).send({
+            message: "NO ha llegado nada"
+        })
+    }
+}
+
+rutasAPI.route("/upload/:id").post(multipartMiddlware, recibirImagen);
 
 //Esta es la funccion de EDITAR Usuario//
 rutasAPI.route("/editar/:id").put(function(req,res){

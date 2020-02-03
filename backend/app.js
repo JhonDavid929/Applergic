@@ -6,6 +6,8 @@ const PORT = 4000;
 const rutasUsuarios = require('./rutas/usuarios');
 const rutasAlimentos = require('./rutas/alimentos');
 const rutasProductos = require('./rutas/productos');
+const multipart = require('connect-multiparty')
+const multipartMiddlware = multipart({uploadDir: './uploads'})
 
 app.use(bodyParser.json());
 app.use(cors());
