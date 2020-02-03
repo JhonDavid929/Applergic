@@ -61,21 +61,28 @@ rutasAPI.route("/").get(function(reqPeticonHttp, resRespuestaHttp){
 rutasAPI.route('/login').post((req, res) => {
     let email = req.body.email;
     let password = req.body.password;
-    console.log(password)
 
-    Usuario.findOne({"email": email}, (err, user) => {
+    Usuario.findOne({"email": email, "password": password}, (err, user) => {
         console.log(user);
-        if(user.password === password){
-            console.log('Bienvenido');
-            res.status(200).send({
-                mensaje: 'ok'
-            })
-        } else {
-            console.log('El email o la contraseña con incorrectos');
-            res.status(401).send({
-                mensaje: 'Error'
-            })
+        if(err){
+            res.json({
+                valido: "no",
+                usuario: user
+            }
+            );
+        }else{
+            if(user !== null){
+                res.json({
+                    valido: "Es valido"
+                })
+            } else {
+                console.log('El email o la contraseña son incorrectos');
+                res.json({
+                    valido: "incorrecto"
+                })
+            }
         }
+        
     });
 })
 
