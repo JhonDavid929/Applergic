@@ -41,7 +41,7 @@
 }
 
 .secBotones {
-    padding-top: 1.5em;
+    padding-top: 0.5em;
 }
 
 .div-boton {
@@ -56,6 +56,7 @@
     height: 39pt;
     margin-left: 5vw;
     margin-right: 5vw;
+    margin-bottom: 1em;
     border-radius: 8pt;
     border-style: none;  
     font-family: 'Montserrat';

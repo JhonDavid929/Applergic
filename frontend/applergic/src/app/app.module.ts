@@ -18,6 +18,7 @@ import { MensajeServicio } from './servicios/mensajeServicio';
 import { UsuarioServicio } from './servicios/usuarioServicio';
 import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.component';
 import { AlergiasService } from './servicios/alergias.service';
+import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { AlergiasService } from './servicios/alergias.service';
     HomeComponent,
     ConfiguracionAlergiasComponent,
     InicioComponent,
-    FinRegistroComponent
+    FinRegistroComponent,
+    ContrasenaOlvidadaComponent
 
   ],
   imports: [
