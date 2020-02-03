@@ -4,7 +4,9 @@
             <img class="back-arrow" src="assets/imagenes/navegacion/arrow-left.svg" alt="Volver">
             <span class="back-text">Volver</span>
         </a>
+        <span class="steps">3 de 4</span>
     </div>
+
     <h1 class="main-title">Ahora selecciona tus alergias e intolerancias.</h1>
     <p class="main-paragraph">Los elementos marcados serán identificados en tus busquedas como peligrosos para ti.</p>
     <div class="alphabet">
@@ -24,7 +26,7 @@
         </div>
         <div class="alphabet-row">
             <div class="letter-link">
-                <a href="">H</a>
+                <a (click)="scroll(section)" href="">H</a>
             </div>
             <div class="letter-link">
                 <a href="">K</a>
@@ -67,11 +69,16 @@
     </div>
     <p class="panel-text">Acceso rápido.</p>
     <div>
-        <div>
-            <div class="index-letter"></div>
-            <a class="arrow"></a>
-            <button class="allergies-button"></button>
+        <div *ngFor="let letter of allergyLetters">
+            <div class="list-header">
+                <div class="index-letter">{{letter}}</div>
+                <a class="arrow"></a>
+            </div>
+            <div *ngIf="foodObjects[letter] | async as foods">
+                <span *ngFor="let food of foods" class="allergies-button">{{ food.nombre }}</span>
+            </div>
         </div>
     </div>
+    <div #section>Prueba de salto</div>
     <button class="accept-button">Guardar</button>
 </div>

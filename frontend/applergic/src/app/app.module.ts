@@ -17,8 +17,7 @@ import { ConfiguracionAlergiasComponent } from './componentes/configuracion-aler
 import { MensajeServicio } from './servicios/mensajeServicio';
 import { UsuarioServicio } from './servicios/usuarioServicio';
 import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.component';
-
-
+import { AlergiasService } from './servicios/alergias.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,10 +37,14 @@ import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.co
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
-    ],
-
-  providers: [],
+    HttpClientModule,
+    RouterModule.forRoot([],{
+      anchorScrolling: 'enabled'
+    })
+  ],
+  providers: [
+    AlergiasService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
