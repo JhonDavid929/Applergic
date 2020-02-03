@@ -1,20 +1,43 @@
 .divVolver{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 1em;
 }
+
 .volver{
-  border: none;
   font-size: .9em;
-  color: #26c7dc;
-  background-color: transparent;
+  color: rgb(38, 199, 220);
+  text-decoration: none;
   margin: 1em 0;
 }
+
+.volver:hover {
+  cursor: pointer;
+}
+
+.back-arrow {
+  font-weight: lighter;
+  vertical-align: middle;
+  color: rgb(38, 199, 220);
+}
+
+.back-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.paginacion{
+  font-size: .8em;
+  font-weight: 700;
+  margin-left: 6em;
+}
+
 .iconHome{
   width: 1em;
   height: 1em;
 }
+
 h1{
   text-align: center;
   margin-bottom: 1em;
@@ -27,12 +50,14 @@ p{
   margin: auto;
   color: #595f65;
 }
+
 .formReg{
   margin-top: 2.3em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .input{
  width: 80vw;
  padding: 1em 0;
@@ -43,6 +68,7 @@ p{
  color: #C4C4C4;
  margin-bottom: 1em;
 }
+
 .buttonRegistrar{
   width: 80vw;
   background-color: #26c7dc;
@@ -52,7 +78,17 @@ p{
   border-radius: 8px;
   margin-top: 2em;
 }
+
 .buttonRegistrar:disabled {
   background-color: #cccccc;
 
+}
+a{
+  text-decoration: none;
+
+}
+.saltaContacto{
+  color: #26c7dc;
+  font-size: 12pt;
+  margin-top: 20pt;
 }

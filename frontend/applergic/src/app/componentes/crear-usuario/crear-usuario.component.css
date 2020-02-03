@@ -5,16 +5,37 @@
   padding: 0 1em;
 }
 .volver{
-  border: none;
   font-size: .9em;
-  color: #26c7dc;
-  background-color: transparent;
+  color: rgb(38, 199, 220);
+  text-decoration: none;
   margin: 1em 0;
 }
-.iconHome{
-  width: 1em;
-  height: 1em;
+.volver:hover {
+  cursor: pointer;
 }
+
+.back-arrow {
+  font-weight: lighter;
+  vertical-align: middle;
+  color: rgb(38, 199, 220);
+}
+
+.back-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.iconHome{
+  width: 1.3em;
+  height: 1.3em;
+}
+.paginacion{
+  font-size: .8em;
+  margin-right: 1.5em;
+  font-weight: 700;
+
+}
+
 h1{
   text-align: center;
   margin-bottom: 1em;
@@ -33,7 +54,7 @@ h1{
   align-items: center;
 }
 .input{
- width: 80vw;
+ width: 85vw;
  padding: 1em 0;
  font-family: Montserrat-Regular;
  font-size: 1.2em;

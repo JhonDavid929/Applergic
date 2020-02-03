@@ -1,7 +1,24 @@
 <div class="intro">
-    <div class="text">
-        <img src="../../../assets/imagenes/group.png" alt="">
+    <img class="intro-logo" src="assets/imagenes/intro/logo.png" alt="Applergic">
+    <ng-container *ngFor="let slide of slides; index as i">
+        <div class="slide-container" *ngIf="i === currentIndex">
+            <img class="slide-image" [src]="slide.image">
+            <p class="slide-desc">{{ slide.description }}</p>
+        </div>
+    </ng-container>
+    <div class="dots-wrapper">
+        <div *ngFor="let _ of slides; index as i" class="dot" [ngClass]="getActiveClass(i)"></div>
     </div>
-    <div class="img-intro"></div>
+    <div class="navigation">
+        <a class="skip" routerLink='/registro'>Saltar</a>
+        <a *ngIf="currentIndex < (slides.length - 1); else finish" class="link-next" (click)="goNextSlide()">
+            <span class="link-text">Siguiente</span>
+            <img class="link-img" src="assets/imagenes/navegacion/arrow-right.svg">
+        </a>
+        <ng-template #finish>
+            <a class="link-next" routerLink="/registro">
+                <span class="link-text">Terminar</span>
+            </a>
+        </ng-template>
+    </div>
 </div>
-
