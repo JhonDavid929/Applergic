@@ -5,10 +5,12 @@ const app = express();
 const PORT = 4000;
 const rutasUsuarios = require('./rutas/usuarios');
 const rutasAlimentos = require('./rutas/alimentos');
+const rutasProductos = require('./rutas/productos');
 
 app.use(bodyParser.json());
 app.use(cors());
 app.use('/api/usuarios', rutasUsuarios);
 app.use('/api/alimentos', rutasAlimentos);
+app.use('/api/productos', rutasProductos);
 
 app.listen(PORT, () => console.log(`Servidor activo ${PORT}`));
