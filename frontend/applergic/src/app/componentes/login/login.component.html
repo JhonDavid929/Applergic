@@ -1,0 +1,24 @@
+<div class="imagen">
+    <img src="../../../assets/imagenes/Alergenios-1-1.jpg" width="372px" height="209" class="imagen_2">
+  </div>
+  <h2 class="cabecera">¡Bienvenido de nuevo!</h2>
+    <div class="texto">
+      <p>Por favor, introduce tus datos para continuar.</p>
+    </div>
+    <form class="form" #formLogin="ngForm" (submit)="onLogin(formLogin)">
+      <div class="margen">
+        <input type="email" name="email" #email="ngModel" [(ngModel)]="usuarioLogin.email" class="campo"><br>
+      </div>
+      <div class="margen">
+        <input type="password" name="password" #password="ngModel" [(ngModel)]="usuarioLogin.password" class="campo"><br>
+      </div>
+      <div class="secBotones">
+        <a href="" class="enlace_1" style="text-decoration:none" >¿Olvidaste tu contraseña?</a><br>
+        <div class="div-boton">
+          <input type="submit" value="Guardar perfil"/>
+        </div>
+        <div class="href">
+          <a href="" class="enlace_2" style="text-decoration:none">Crea tu cuenta aquí</a><br>
+        </div>
+      </div>
+    </form>

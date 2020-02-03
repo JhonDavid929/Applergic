@@ -32,7 +32,6 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  }];
   },
   {
     path: "emergencia", 
