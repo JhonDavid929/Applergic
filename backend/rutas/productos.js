@@ -44,4 +44,19 @@ rutasAPI.route("/").get((req, res) => {
     })
 })
 
+//SACAR PRODUCTO POR CODIGO DE BARRAS
+rutasAPI.route("/:codigo").get((req, res) => {
+    let codigo = req.params.codigo;
+    console.log(codigo)
+    Producto.findOne({codigoBarras: codigo}, (err, product) => {
+        if(err){
+            res.json({
+                mensaje: "No se ha encontrado"
+            })
+        } else {
+            res.json(product);
+        }
+    })
+})
+
 module.exports = rutasAPI;
