@@ -19,6 +19,7 @@ import { UsuarioServicio } from './servicios/usuarioServicio';
 import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.component';
 import { AlergiasService } from './servicios/alergias.service';
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
+import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/c
     ConfiguracionAlergiasComponent,
     InicioComponent,
     FinRegistroComponent,
-    ContrasenaOlvidadaComponent
+    ContrasenaOlvidadaComponent,
+    ResultadoEscanerComponent
 
   ],
   imports: [
