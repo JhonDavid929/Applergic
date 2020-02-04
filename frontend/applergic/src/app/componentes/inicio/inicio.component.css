@@ -1,0 +1,13 @@
+.home-page {
+    min-height: 812px;
+    background-image: url("../../../assets/imagenes/inicio/logoApplergicFigurasGiro.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center bottom;
+}
+
+.brand {
+    display: block;
+    margin: 0 auto;
+    padding-top: 188px;
+}

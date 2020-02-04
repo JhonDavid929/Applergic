@@ -1,0 +1,84 @@
+<div class="main-container">
+    <div class="back-option">
+        <a routerLink="/registro" class="volver">
+            <img class="back-arrow" src="assets/imagenes/navegacion/arrow-left.svg" alt="Volver">
+            <span class="back-text">Volver</span>
+        </a>
+        <span class="steps">3 de 4</span>
+    </div>
+
+    <h1 class="main-title">Ahora selecciona tus alergias e intolerancias.</h1>
+    <p class="main-paragraph">Los elementos marcados serán identificados en tus busquedas como peligrosos para ti.</p>
+    <div class="alphabet">
+        <div class="alphabet-row">
+            <div class="letter-link">
+                <a href="">A</a>
+            </div>
+            <div class="letter-link">
+                <a href="">C</a>
+            </div>
+            <div class="letter-link">
+                <a href="">F</a>
+            </div>
+            <div class="letter-link">
+                <a href="">G</a>
+            </div>
+        </div>
+        <div class="alphabet-row">
+            <div class="letter-link">
+                <a (click)="scroll(section)" href="">H</a>
+            </div>
+            <div class="letter-link">
+                <a href="">K</a>
+            </div>
+            <div class="letter-link">
+                <a href="">L</a>
+            </div>
+            <div class="letter-link">
+                <a href="">M</a>
+            </div>
+        </div>
+        <div class="alphabet-row">
+            <div class="letter-link">
+                <a href="">N</a>
+            </div>
+            <div class="letter-link">
+                <a href="">P</a>
+            </div>
+            <div class="letter-link">
+                <a href="">R</a>
+            </div>
+            <div class="letter-link">
+                <a href="">S</a>
+            </div>
+        </div>
+        <div class="alphabet-row">
+            <div class="letter-link">
+                <a href="">T</a>
+            </div>
+            <div class="letter-link">
+                <a href="">U</a>
+            </div>
+            <div class="letter-link">
+                <a href="">V</a>
+            </div>
+            <div class="letter-link">
+                <a href="">Y</a>
+            </div>
+        </div>
+    </div>
+    <p class="panel-text">Acceso rápido.</p>
+    <div>
+        <div *ngFor="let letter of allergyLetters">
+            <div class="list-header">
+                <div class="index-letter">{{letter}}</div>
+                <a class="arrow"></a>
+            </div>
+            <div *ngIf="foodObjects[letter] | async as foods">
+                <span *ngFor="let food of foods" class="allergies-button">{{ food.nombre }}</span>
+            </div>
+        </div>
+    </div>
+    <div #section>Prueba de salto</div>
+    <button class="accept-button">Guardar</button>
+</div>

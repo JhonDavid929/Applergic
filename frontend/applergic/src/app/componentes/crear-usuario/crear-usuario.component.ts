@@ -1,9 +1,8 @@
-import { Component/*, OnInit */} from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component} from '@angular/core';
+import { NgForm, Form } from '@angular/forms';
 import { Usuario } from '../../entidades/usuario';
-
-
-
+import { UsuarioServicio } from '../../servicios/usuarioServicio';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'crear-usuario',
@@ -12,34 +11,33 @@ import { Usuario } from '../../entidades/usuario';
 })
 
 
-export class CrearUsuarioComponent /*implements OnInit*/ {
+export class CrearUsuarioComponent {
   titulo: string = "Dinos quien eres";
   public usuarioNuevo: Usuario;
   valido: boolean;
 
-  constructor(){
+  constructor(private usuarioServicio: UsuarioServicio, private router: Router){
     this.valido = false;
-    this.usuarioNuevo = new Usuario()
-    //this.usuarioNuevo.nombre = '';
-    //this.usuarioNuevo.email = '';
-    //this.usuarioNuevo.movil = '';
-    //this.usuarioNuevo.password = '';
+    this.usuarioNuevo = {
+      "nombre": "",
+      "email": "",
+      "movil": "",
+      "password": "",
+      "imagen": "",
+      "alimentos": [],
+      }
   }
+
   onSubmit(form) {
-    console.log("evento submit lanzado");
+    this.usuarioServicio.crearUsuario(this.usuarioNuevo)
     console.log(this.usuarioNuevo);
-    form.reset();
+    this.router.navigate(['emergencia']);
   }
+
   alPerderFoco() {
     if ( typeof this.usuarioNuevo.nombre !== "undefined"
         && this.usuarioNuevo.nombre !== "") {
           this.valido = true;
         }
   }
-   
-  
-
-
-
-
 }

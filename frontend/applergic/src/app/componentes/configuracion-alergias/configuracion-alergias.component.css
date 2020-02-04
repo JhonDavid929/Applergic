@@ -1,0 +1,126 @@
+.main-container {
+    position: absolute;
+}
+
+.main-title {
+    width: 264px;
+    height: 50px;
+    margin: 0 auto;
+    padding-top: 17px;
+    padding-bottom: 26px;
+    color: rgb(7, 15, 21);
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main-paragraph {
+    width: 321px;
+    height: 73px;
+    text-align: center;
+    color: rgb(89, 95, 101);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.alphabet {
+    width: 295px;
+    height: 295px;
+    border: 1.5px solid rgb(230, 230, 230);
+    margin: 27px 40px 45px;
+}
+
+.alphabet-row {
+    display: flex;
+}
+
+.letter-link {
+    width: 16px;
+    height: 16px;
+    background-color: rgb(168, 168, 168);
+    margin: 19px 19px;
+    padding: 10px;
+    border-radius: 50%;
+    /*text-transform: uppercase;*/
+    float:left;
+}
+
+.letter-link a {
+    color: rgb(255, 255, 255);
+    text-decoration:none;
+    font-size: 14px;
+    padding: 4px;
+}
+
+.panel-text {
+    position: relative;
+    bottom: 200px;
+    left: 145px;
+    width: 93px;
+    height: 15px;
+    color: rgb(89, 95, 101);
+    font-size: 14px;
+}
+
+.accept-button {
+    width: 325px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgb(38, 199, 220);
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.8px;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.back-option {
+    display: flex;
+    align-items: center;
+    margin-top: 64px;
+}
+
+.volver{
+    font-size: .9em;
+    color: rgb(38, 199, 220);
+    text-decoration: none;
+    margin-left: 16px;
+}
+  
+.volver:hover {
+    cursor: pointer;
+}
+
+.back-arrow {
+    font-weight: lighter;
+    vertical-align: middle;
+    color: rgb(38, 199, 220);
+  }
+  
+  .back-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+
+  .steps {
+      color: rgb(0, 0, 0);
+      font-size: 14px;
+      font-weight: bold;
+      margin-left: 90px;
+  }
+
+  .index-letter {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgb(168, 168, 168);
+    margin: 19px 19px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-align: center;
+  }

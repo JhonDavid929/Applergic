@@ -1,0 +1,23 @@
+<div class="header">
+    <img src="../../../assets/imagenes/login/image@2x.png" width="373px" height="248px">
+  <div class="logo">
+    <img src="../../../assets/imagenes/login/logo.png" widht="80px" height="22px" > 
+  </div>
+</div>
+  <h2 class="cabecera">¿Olvidaste tu contraseña?</h2>
+    <div class="texto">
+      <p>Por favor, introduce tu email para generar una nueva.</p>
+    </div>
+    <form class="form" #formLogIn="ngForm" class="formReg">
+      <div class="margen">
+        <input type="email" class="campo" placeholder="Dirección e.mail" name="email"><br>
+      </div>
+      <div class="secBotones">
+        <div class="div-boton">
+          <input class="boton" type="submit" name="Entrar" value="Enviar"/>
+        </div>
+        <div class="href">
+          <a [routerLink]='["/login"]' class="enlace_2" style="text-decoration:none">Vuelve a LogIn</a><br>
+        </div>
+      </div>
+    </form>
