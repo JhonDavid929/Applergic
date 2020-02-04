@@ -34,6 +34,11 @@ import { ResultadoServicio } from './servicios/resultadoServicio';
     InicioComponent,
     HomeComponent,
     ConfiguracionAlergiasComponent,
+<<<<<<< HEAD
+=======
+    InicioComponent,
+    EscanerComponent,
+>>>>>>> 5abd295234f42dcea5de9bab1fb371d94499a9ad
     FinRegistroComponent,
     ContrasenaOlvidadaComponent
 

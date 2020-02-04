@@ -47,14 +47,17 @@ rutasAPI.route("/").get((req, res) => {
 //SACAR PRODUCTO POR CODIGO DE BARRAS
 rutasAPI.route("/:codigo").get((req, res) => {
     let codigo = req.params.codigo;
-    console.log(codigo)
+ 
     Producto.findOne({codigoBarras: codigo}, (err, product) => {
-        if(err){
+        if(product === null){
             res.json({
-                mensaje: "No se ha encontrado"
+                mensaje: "No se ha encontrado este producto, vuelva a escanearlo."
             })
         } else {
-            res.json(product);
+            res.json({
+                mensaje: "Si",
+                producto: product
+            });
         }
     })
 })
