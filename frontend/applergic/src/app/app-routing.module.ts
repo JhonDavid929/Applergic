@@ -8,7 +8,9 @@ import { ConfiguracionAlergiasComponent } from './componentes/configuracion-aler
 import { CrearEmergenciaComponent } from './componentes/crear-emergencia/crear-emergencia.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.component';
+import { EscanerComponent } from './componentes/escaner/escaner.component';
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
+import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
 
 const routes: Routes = [
   {
@@ -51,6 +53,14 @@ const routes: Routes = [
   {
     path: 'contraseña_olvidada',
     component: ContrasenaOlvidadaComponent
+  },
+  {
+    path: 'escaner',
+    component: EscanerComponent
+  },
+  {
+    path: 'escaneo',
+    component: ResultadoEscanerComponent
   }
 
 ];

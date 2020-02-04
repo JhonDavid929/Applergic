@@ -30,7 +30,6 @@ export class UsuarioServicio {
   }
 
   logIn(usuario: Usuario){
-    //let params = JSON.stringify(usuario);
     let headers = new HttpHeaders().set('Content-Type', 'application/json')
     let obj = this.clienteHttp.post<any>("http://127.0.0.1:4000/api/usuarios/login", usuario, {headers: headers});
     obj.subscribe(datos =>{

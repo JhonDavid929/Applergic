@@ -10,6 +10,9 @@ let Producto = new Schema({
     },
     codigoBarras: {
         type: String
+    },
+    imagen: {
+        type: String
     }
 })
 
