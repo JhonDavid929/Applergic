@@ -20,6 +20,7 @@ import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.co
 import { AlergiasService } from './servicios/alergias.service';
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
+import { EscanerComponent } from './componentes/escaner/escaner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resul
     HomeComponent,
     ConfiguracionAlergiasComponent,
     InicioComponent,
+    EscanerComponent
     FinRegistroComponent,
     ContrasenaOlvidadaComponent,
     ResultadoEscanerComponent
