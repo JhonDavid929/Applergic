@@ -77,12 +77,11 @@ rutasAPI.route("/editar/:id").put(function(req,res){
 });
 
 //SACAR USUARIOS (metodo get para ver los Usuarios que estan en la BBDD)
-rutasAPI.route("/").get(function(reqPeticonHttp, resRespuestaHttp){
+rutasAPI.route("/").get(function(reqPeticionHttp, resRespuestaHttp){
     Usuario.find(function(err, colecionUsuarios){
         if(err){
-            console.log(err);
-        }else{
-            
+            resRespuestaHttp.json(err);
+        }else{          
             resRespuestaHttp.json(colecionUsuarios)
         }
     })
@@ -113,7 +112,6 @@ rutasAPI.route('/login').post((req, res) => {
                 })
             }
         }
-        
     });
 })
 

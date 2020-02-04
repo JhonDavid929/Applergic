@@ -19,6 +19,21 @@ let Usuario = new Schema({
     },
     alimentos:{
         type: Array,
+    },
+    seguro: {
+        compania: String,
+        poliza: String
+    },
+    contactoEmergencia: {
+        nombre: {
+            type: String
+        },
+        email: {
+            type: String
+        },
+        movil: {
+            type: String
+        }
     }
 });
 
