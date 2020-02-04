@@ -15,14 +15,13 @@ let PersonaEmergencia = new Schema({
     movil: {
         type: String,
     },
-    seguro: {
-        compania: {
-            type: String
-        },
-        poliza: {
-            type: String
-        }
+    compania: {
+        type: String
+    },
+    poliza: {
+        type: String
     }
+
 });
 
 module.exports = mongoose.model('PersonaEmergencia', PersonaEmergencia);

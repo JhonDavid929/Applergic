@@ -9,16 +9,18 @@
 
   <h1>Vamos a añadir tu contacto en caso de emergencia.</h1>
   <p>Nos pondremos en contacto con tu persona de confianza y/o compañia de seguros en caso de emergencia</p>
-  <form  #formRegistro="ngForm" class="formReg">
-    <input type="text" placeholder="Nombre completo de tu contacto" class="input" required name="nombre" #nombre="ngModel" [(ngModel)]="emergenciaNueva.nombre" (blur)="alPerderFoco()" ngModel pattern="[a-zA-Z ]*"/>
+  <form  #formEmergencia="ngForm" class="formReg" (submit)="onSubmit(formEmergencia)">
+
+    <input type="text" placeholder="Nombre completo de tu contacto" class="input" required name="nombre" #nombre="ngModel" [(ngModel)]="personaEmergencia.nombre" (blur)="alPerderFoco()" ngModel pattern="[a-zA-Z ]*"/>
+
+    <input type="email" placeholder="Direccion email" class="input" name="email" [(ngModel)]="personaEmergencia.email" required/>
+
+    <input type="text" placeholder="Movil" class="input" name="movil" name="movil" [(ngModel)]="personaEmergencia.movil" required />
+
+    <input type="text" placeholder="Compañia de seguros/Nº Póliza" class="input" name="seguro" [(ngModel)]="personaEmergencia.compania" required/>
 
 
-    <input type="email" placeholder="Direccion email" class="input" name="email" [(ngModel)]="emergenciaNueva.email" required/>
-    <input type="text" placeholder="Movil" class="input" name="movil" name="movil" [(ngModel)]="emergenciaNueva.movil" required />
-    <input type="text" placeholder="Compañia de seguros/Nº Póliza" class="input" name="compSeguros " [(ngModel)]="emergenciaNueva.password" required/>
-
-
-    <a routerLink="/alergias"><input type="button" value="Guardar emergencias"  class="buttonRegistrar" (click)="onSubmit(formRegistro)" [disabled]="!formRegistro.valid" /></a>
+   <input type="submit" value="Guardar emergencias" class="buttonRegistrar"  [disabled]="!formEmergencia.valid"/>
   </form>
   <a routerLink="/alergias"><p class="saltaContacto">Registraré mi contacto en otro momento</p></a>
 </div>
