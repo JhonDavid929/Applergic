@@ -22,7 +22,6 @@ import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/c
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
 import { ResultadoServicio } from './servicios/resultadoServicio';
 
-import { EscanerComponent } from './componentes/escaner/escaner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +30,12 @@ import { EscanerComponent } from './componentes/escaner/escaner.component';
     AppComponent,
     CrearUsuarioComponent,
     CrearEmergenciaComponent,
+    ResultadoEscanerComponent,
+    InicioComponent,
+    HomeComponent,
+    ConfiguracionAlergiasComponent,
+    FinRegistroComponent,
+    ContrasenaOlvidadaComponent
 
   ],
   imports: [

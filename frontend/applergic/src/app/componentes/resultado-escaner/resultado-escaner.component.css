@@ -1,0 +1,60 @@
+.cont{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.lado{
+    margin-left: 25px;
+    
+}
+.lado2{
+    justify-content: center;
+    justify-items: center;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.centro{
+   margin-top: 45px;
+   margin-left: 60px;
+}
+
+.cont1{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.lado3{
+    justify-content: center;
+    justify-items: center;
+    margin-left: 110px;
+    margin-top: 45px;
+}
+.centro2{
+    justify-content: center;
+    justify-items: center;
+    margin-top: 45px;
+    margin-left: 150px;
+ }
+ .centro3{
+    justify-content: center;
+    justify-items: center;
+    margin-top: 45px;
+    margin-left: 10px;
+ }
+ /* .fondo{
+     background-image: url("../../../assets/imagenes/resultado-escaner/cuadro.png");
+     position: relative;
+     float: center;
+     width: 60vw;
+     height: 30vh;
+     background-repeat: no-repeat;
+     
+ }
+  */
+ 
+
+
+   
