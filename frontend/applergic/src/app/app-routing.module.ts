@@ -62,7 +62,6 @@ const routes: Routes = [
     path: 'escaneo',
     component: ResultadoEscanerComponent
   }
-
 ];
 
 

@@ -34,7 +34,7 @@ import { EscanerComponent } from './componentes/escaner/escaner.component';
     HomeComponent,
     ConfiguracionAlergiasComponent,
     InicioComponent,
-    EscanerComponent
+    EscanerComponent,
     FinRegistroComponent,
     ContrasenaOlvidadaComponent,
     ResultadoEscanerComponent
