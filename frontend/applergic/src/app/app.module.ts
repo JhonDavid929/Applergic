@@ -28,15 +28,6 @@ import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resul
     AppComponent,
     CrearUsuarioComponent,
     CrearEmergenciaComponent,
-<<<<<<< HEAD
-=======
-    HomeComponent,
-    ConfiguracionAlergiasComponent,
-    InicioComponent,
-    FinRegistroComponent,
-    ContrasenaOlvidadaComponent,
-    ResultadoEscanerComponent
->>>>>>> 94692b3e244e67aca216d0ab93938fe58c771dcb
 
   ],
   imports: [
