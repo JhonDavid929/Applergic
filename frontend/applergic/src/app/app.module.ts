@@ -18,7 +18,7 @@ import { IntroduccionComponent } from './componentes/introduccion/introduccion.c
     IntroduccionComponent,
     AppComponent,
     CrearUsuarioComponent,
-    CrearEmergenciaComponent
+    CrearEmergenciaComponent,
 
   ],
   imports: [
