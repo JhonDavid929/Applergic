@@ -21,7 +21,7 @@ export class CrearEmergenciaComponent implements OnInit {
   constructor(private emergenciaServicio: PersonaEmergenciaServicio, private router: Router) { 
     this.valido = false;
     this.personaEmergencia = {
-      usuario: this.usuarioRegistrado = JSON.parse(sessionStorage.getItem("usuario")),
+      usuario: "",
       nombre: "",
       email: "",
       movil: "",
@@ -39,13 +39,16 @@ export class CrearEmergenciaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.usuarioRegistrado = JSON.parse(sessionStorage.getItem("usuario"))
-    console.log(this.usuarioRegistrado);
+    let user = JSON.parse(sessionStorage.getItem("user"));
+    console.log(user.usuario);
+    this.personaEmergencia.usuario = user.usuario;
+    console.log(this.personaEmergencia);
+    //this.usuarioRegistrado = JSON.parse(sessionStorage.getItem("user"))
+    //console.log(this.usuarioRegistrado);
   }
 
   onSubmit(form) {
     this.emergenciaServicio.crearPersona(this.personaEmergencia);
-    console.log(this.personaEmergencia);
     this.router.navigate(['alergias']);
   }
 
