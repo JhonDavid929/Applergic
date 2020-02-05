@@ -7,7 +7,8 @@ import { Alimento } from '../entidades/alimento';
 })
 export class AlergiasService {
 
-  private readonly ALLERGY_LETTERS = ['A', 'C', 'F', 'G', 'H', 'K', 'L', 'M', 'N', 'P', 'R', 'S', 'T', 'U', 'V', 'Y']
+  private readonly ALLERGY_LETTERS = ['A', 'C', 'F', 'G', 'H', 'K', 'L', 'M', 'N', 'P', 'R', 'S', 'T', 'U', 'V', 'Y'];
+  private selectedAlergies = {};
 
   constructor(
     private http: HttpClient
@@ -19,5 +20,17 @@ export class AlergiasService {
 
   getAllergyLetters() {
     return this.ALLERGY_LETTERS;
+  }
+
+  getSelectedAlergies() {
+    return this.selectedAlergies;
+  }
+
+  insertSelectedAlergy(foodName: string) {
+    // TOOD: myObj[xxx] = true
+  }
+
+  removeSelectedAlergy(foodName: string) {
+    // TODO: delete myObj[xxx]
   }
 }
