@@ -1,0 +1,42 @@
+<ng-container>
+  <div class="divClose">
+    <a routerLink="/home" class="volver"><img src="assets/imagenes/fin-registro/close.png" alt="close" class="iconClose"></a>
+  </div>
+  <div class="title">
+    <span>Escaneando...</span>
+  </div>
+
+  <ng-container *ngFor="let slide of slides; index as i">
+      <div class="slide-container" *ngIf="i === currentIndex">
+          <p class="slide-desc">{{ slide.description }}</p>
+          <img class="slide-image" [src]="slide.image">
+      </div>
+  </ng-container>
+  <div class="dots-wrapper">
+      <div *ngFor="let _ of slides; index as i" class="dot" [ngClass]="getActiveClass(i)"></div>
+  </div>
+  <div class="divBolas">
+    <a routerLink="/escaner" >
+      <div class="bolaColor-1">
+        <img src="assets/imagenes/escaneo/barcode2_black.png" alt="codigo" class="barCode">
+      </div>
+    </a>
+    <div (click)="eventClick(); onChangeClassQR()" [ngClass]="cambiaColorQR ? 'bolaColor-1': 'bolaColor-2'">
+        <img src="assets/imagenes/escaneo/qr_black.png" alt="codigo" class="barCode">
+    </div>
+    <div (click)="eventClick2(); ; onChangeClassNFC()" [ngClass]="cambiaColorNFC ? 'bolaColor-1': 'bolaColor-2'" >
+        <img src="assets/imagenes/escaneo/nfc_black.png" alt="codigo" class="barCode">
+    </div>
+  </div>
+
+
+  <!--
+  <div class="divParrafo">
+    <p class="parrafo">Tan solo tienes que centrar el  código <span class="spanParrafo">QR</span> del producto en el recuadro</p>
+  </div>
+
+  <div class="imgQr">
+    <img src="assets/imagenes/escaneo/captura_qr.png" alt="">
+  </div>
+</div>
+-->

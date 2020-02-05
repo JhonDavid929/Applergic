@@ -27,6 +27,7 @@ import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resul
 import { ResultadoServicio } from './servicios/resultadoServicio';
 import { EscanerComponent } from './componentes/escaner/escaner.component';
 import { ConfirmacionAlergiasComponent} from './componentes/confirmacion-alergias/confirmacion-alergias.component'
+import { LectorQrNFCComponent } from './componentes/lector-qr-nfc/lector-qr-nfc.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,9 @@ import { ConfirmacionAlergiasComponent} from './componentes/confirmacion-alergia
     EscanerComponent,
     FinRegistroComponent,
     ContrasenaOlvidadaComponent,
-    ConfirmacionAlergiasComponent
+    ConfirmacionAlergiasComponent,
+    ResultadoEscanerComponent,
+    LectorQrNFCComponent
 
   ],
   imports: [

@@ -12,6 +12,7 @@ import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/c
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
 import { EscanerComponent } from './componentes/escaner/escaner.component';
 import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
+import { LectorQrNFCComponent } from './componentes/lector-qr-nfc/lector-qr-nfc.component';
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -56,7 +57,7 @@ const routes: Routes = [
   {
     path: 'emergencia',
     component: CrearEmergenciaComponent
-  },  
+  },
   {
     path: 'fin',
     component: FinRegistroComponent
@@ -73,6 +74,11 @@ const routes: Routes = [
     path: 'escaneo',
     component: ResultadoEscanerComponent
   },
+  {
+    path: 'lectores',
+    component: LectorQrNFCComponent
+  }
+
 ];
 
 
