@@ -56,14 +56,7 @@ const routes: Routes = [
   {
     path: 'escaneo',
     component: ResultadoEscanerComponent
-
-  }
-<<<<<<< HEAD
-  
-
-
-=======
->>>>>>> 5abd295234f42dcea5de9bab1fb371d94499a9ad
+  },
 ];
 
 

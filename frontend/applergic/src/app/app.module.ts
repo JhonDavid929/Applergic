@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +25,7 @@ import { AlergiasService } from './servicios/alergias.service';
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
 import { ResultadoServicio } from './servicios/resultadoServicio';
-
+import { EscanerComponent } from './componentes/escaner/escaner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,13 +38,10 @@ import { ResultadoServicio } from './servicios/resultadoServicio';
     InicioComponent,
     HomeComponent,
     ConfiguracionAlergiasComponent,
-<<<<<<< HEAD
-=======
     InicioComponent,
     EscanerComponent,
->>>>>>> 5abd295234f42dcea5de9bab1fb371d94499a9ad
     FinRegistroComponent,
-    ContrasenaOlvidadaComponent
+    ContrasenaOlvidadaComponent,
 
   ],
   imports: [
@@ -49,6 +50,8 @@ import { ResultadoServicio } from './servicios/resultadoServicio';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
     RouterModule.forRoot([],{
       anchorScrolling: 'enabled'
     })
