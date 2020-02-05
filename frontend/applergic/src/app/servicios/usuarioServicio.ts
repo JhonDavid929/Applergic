@@ -20,6 +20,7 @@ export class UsuarioServicio {
     let user = this.clienteHttp.post("http://127.0.0.1:4000/api/usuarios/registro", params, {headers: headers}).subscribe(
       response => {
         console.log(response);
+        sessionStorage.setItem("usuario", JSON.stringify(response));
       },
       error => {
         console.log(error);
@@ -35,9 +36,9 @@ export class UsuarioServicio {
     obj.subscribe(datos =>{
 
       if(datos.valido === "incorrecto"){
-        alert("Usuario "+datos.valido);
+        alert(datos.valido);
       }else{
-        alert("Iniciado sesion");
+        sessionStorage.setItem("usuario", JSON.stringify(datos.usuario))
         this.router.navigate(['home']);
       }
     })

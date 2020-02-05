@@ -10,6 +10,7 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.component';
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
+import { EscanerComponent } from './componentes/escaner/escaner.component';
 import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
 
 const routerOptions: ExtraOptions = {
@@ -65,6 +66,10 @@ const routes: Routes = [
     component: ContrasenaOlvidadaComponent
   },
   {
+    path: 'escaner',
+    component: EscanerComponent
+  },
+  {
     path: 'escaneo',
     component: ResultadoEscanerComponent
   },
@@ -75,4 +80,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

@@ -24,9 +24,10 @@ import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.co
 import { AlergiasService } from './servicios/alergias.service';
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
-import { ResultadoServicio } from './servicios/resultadoServicio';
 import { EscanerComponent } from './componentes/escaner/escaner.component';
+import { ResultadoServicio } from './servicios/resultadoServicio';
 import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
+
 @NgModule({
   declarations: [
     AppComponent,

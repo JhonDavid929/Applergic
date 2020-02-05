@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ResultadoServicio } from '../../servicios/resultadoServicio';
 import { Producto } from '../../entidades/producto';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-resultado-escaner',
@@ -12,7 +13,7 @@ export class ResultadoEscanerComponent implements OnInit {
 
   public producto: Producto;
 
-  constructor(private resultadoServicio: ResultadoServicio) {
+  constructor(private resultadoServicio: ResultadoServicio, private router: Router) {
     this.producto = {
       nombre: "",
       ingredientes: [],
@@ -25,9 +26,8 @@ export class ResultadoEscanerComponent implements OnInit {
     this.producto = JSON.parse(sessionStorage.getItem("producto"))
   }
 
-  // sacarProducto(){
-  //   let producto = this.resultadoServicio.getProducto(this.producto);
-  //   return producto;
-  // }
+  redirigir(){
+    this.router.navigate(['escaner']);
+  }
 
 }
