@@ -11,8 +11,6 @@ import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.co
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
 import { EscanerComponent } from './componentes/escaner/escaner.component';
-<<<<<<< HEAD
-=======
 import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
 
 const routerOptions: ExtraOptions = {
@@ -20,7 +18,6 @@ const routerOptions: ExtraOptions = {
   anchorScrolling: 'enabled',
   scrollOffset: [0, 64],
 };
->>>>>>> d0749603f4fd7400030b4800baf50678e3819521
 
 const routes: Routes = [
   {
@@ -75,17 +72,7 @@ const routes: Routes = [
   {
     path: 'escaneo',
     component: ResultadoEscanerComponent
-<<<<<<< HEAD
-
   },
-
-  {
-    path: 'escaner',
-    component: EscanerComponent
-  }
-=======
-  },
->>>>>>> d0749603f4fd7400030b4800baf50678e3819521
 ];
 
 

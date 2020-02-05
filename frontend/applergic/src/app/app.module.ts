@@ -24,14 +24,9 @@ import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.co
 import { AlergiasService } from './servicios/alergias.service';
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
-import { EscanerComponent } from './componentes/escaner/escaner.component';
 import { ResultadoServicio } from './servicios/resultadoServicio';
-<<<<<<< HEAD
 import { EscanerComponent } from './componentes/escaner/escaner.component';
-=======
-import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
->>>>>>> d0749603f4fd7400030b4800baf50678e3819521
-
+import { ConfirmacionAlergiasComponent} from './componentes/confirmacion-alergias/confirmacion-alergias.component'
 @NgModule({
   declarations: [
     AppComponent,
