@@ -30,7 +30,6 @@ export class CrearUsuarioComponent {
 
   onSubmit(form) {
     this.usuarioServicio.crearUsuario(this.usuarioNuevo)
-    console.log(this.usuarioNuevo);
     this.router.navigate(['emergencia']);
   }
 
