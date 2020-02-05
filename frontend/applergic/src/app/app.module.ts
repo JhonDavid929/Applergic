@@ -51,7 +51,6 @@ import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergi
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
     HttpClientModule,
     MatSidenavModule,
     MatListModule,
