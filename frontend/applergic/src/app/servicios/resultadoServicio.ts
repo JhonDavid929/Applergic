@@ -16,7 +16,6 @@ export class ResultadoServicio{
         obj.subscribe(datos => {
             if(datos.mensaje === "Si"){
                 callback(datos.producto);
-                //sessionStorage.setItem("producto", JSON.stringify(datos.producto));
                 this.router.navigate(['escaneo']);
               }else{
                 alert(datos.mensaje)
