@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
     <div> <!--Aqui esta la imagen de cabecera-->
         <img src="../../../assets/imagenes/resultado-escaner/cabeceraConLogo.png" alt="">
@@ -41,21 +40,25 @@
 
     <!--400-->
     <div class="lado3">
-    <img src="../../../assets/imagenes/resultado-escaner/nesquik400G.png" alt="">         
+  <h1>{{producto.nombre}}</h1>    
     </div>
 
     <!--NESTLE-->
     <div class="centro2">
-        <img src="../../../assets/imagenes/resultado-escaner/nestle.png" alt="">         
+        <h4> ingredientes</h4>        
     </div>
     
     <div class="centro3">
-        <img src="../../../assets/imagenes/resultado-escaner/ingredientesAzCar.png" alt="">         
+       
+        <p>{{producto.ingredientes}}</p>
     </div>
     
     <div class="centro3">
-        <img src="../../../assets/imagenes/resultado-escaner/primary.png" alt="">         
+                <!-- AQUI SE DECLARA LA RUTA QUE LO DEVOLVERA A LA RUTA QUE HA SIDO CREADA POR PACO-->
+    <button [routerLink]='["/escaner"]'><h2> Escanea otro producto </h2></button> 
+           
     </div>
+ 
     
 
 
@@ -66,5 +69,3 @@
 
 
 
-=======
->>>>>>> 5abd295234f42dcea5de9bab1fb371d94499a9ad

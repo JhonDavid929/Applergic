@@ -29,14 +29,14 @@
 .lado3{
     justify-content: center;
     justify-items: center;
-    margin-left: 110px;
+    margin-left: 150px;
     margin-top: 45px;
 }
 .centro2{
     justify-content: center;
     justify-items: center;
     margin-top: 45px;
-    margin-left: 150px;
+    margin-left: 140px;
  }
  .centro3{
     justify-content: center;
@@ -44,17 +44,23 @@
     margin-top: 45px;
     margin-left: 10px;
  }
- /* .fondo{
-     background-image: url("../../../assets/imagenes/resultado-escaner/cuadro.png");
-     position: relative;
-     float: center;
-     width: 60vw;
-     height: 30vh;
-     background-repeat: no-repeat;
+ button{
+     background-color: #26c7dc;
+     width: 100%;
+     height: 60px;
+     border-radius: 10px;
+     border-style: none;
+   
+   
+ }
+ h2{
+    color: white;
+ }
+ 
+ p{
+     background-color: #cccccc60;
      
  }
-  */
- 
 
 
    

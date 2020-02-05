@@ -10,6 +10,7 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.component';
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
+import { EscanerComponent } from './componentes/escaner/escaner.component';
 
 const routes: Routes = [
   {
@@ -57,13 +58,12 @@ const routes: Routes = [
     path: 'escaneo',
     component: ResultadoEscanerComponent
 
+  },
+
+  {
+    path: 'escaner',
+    component: EscanerComponent
   }
-<<<<<<< HEAD
-  
-
-
-=======
->>>>>>> 5abd295234f42dcea5de9bab1fb371d94499a9ad
 ];
 
 
