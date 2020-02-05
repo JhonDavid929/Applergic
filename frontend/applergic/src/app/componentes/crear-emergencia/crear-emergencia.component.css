@@ -6,6 +6,7 @@
 }
 
 .volver{
+  font-family: 'Montserrat';
   font-size: .9em;
   color: rgb(38, 199, 220);
   text-decoration: none;
@@ -28,6 +29,7 @@
 }
 
 .paginacion{
+  font-family: 'Montserrat';
   font-size: .8em;
   font-weight: 700;
   margin-left: 6em;
@@ -39,11 +41,13 @@
 }
 
 h1{
+  font-family: 'Montserrat';
   text-align: center;
   margin-bottom: 1em;
 }
 
 p{
+  font-family: 'Montserrat';
   text-align: center;
   font-size: 15pt;
   width: 75vw;
@@ -59,14 +63,14 @@ p{
 }
 
 .input{
- width: 80vw;
- padding: 1em 0;
- font-family: Montserrat-Regular;
- font-size: 1.2em;
- border: 0;
- border-bottom: 2px solid #C4C4C4;
- color: #C4C4C4;
- margin-bottom: 1em;
+  width: 80vw;
+  padding: 1em 0;
+  font-family: Montserrat-Regular;
+  font-size: 1.2em;
+  border: 0;
+  border-bottom: 2px solid #C4C4C4;
+  color: #C4C4C4;
+  margin-bottom: 1em;
 }
 
 .buttonRegistrar{

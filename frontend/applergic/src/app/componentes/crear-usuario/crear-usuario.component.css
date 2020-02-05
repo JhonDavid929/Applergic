@@ -5,6 +5,7 @@
   padding: 0 1em;
 }
 .volver{
+  font-family: 'Montserrat';
   font-size: .9em;
   color: rgb(38, 199, 220);
   text-decoration: none;
@@ -30,11 +31,13 @@
   height: 1.3em;
 }
 .paginacion{
+  font-family: 'Montserrat';
   font-size: .8em;
   margin-right: 1.5em;
   font-weight: 700;
 }
 h1{
+  font-family: 'Montserrat';
   text-align: center;
   margin-bottom: 1em;
 }
@@ -59,22 +62,22 @@ h1{
   background-size: 70% 70%;
   background-repeat: no-repeat;
   background-position: 50% 15%
-} 
+}
 .imagenForm .texto {
-display: block;
-font-size: 1em;
-padding: 0 .5em;
-color: #26c7dc;
-margin-top: 75px;
+  display: block;
+  font-size: 1em;
+  padding: 0 .5em;
+  color: #26c7dc;
+  margin-top: 75px;
 }
 input[type="file"] {
-height: 10em;
-opacity: 0;
-position: absolute;
-top: 0;
-left: 0;
-width: 100%; 
-z-index: 3;
+  height: 10em;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
 }
 .formReg{
   margin-top: 2.3em;
@@ -83,14 +86,14 @@ z-index: 3;
   align-items: center;
 }
 .input{
- width: 85vw;
- padding: 1em 0;
- font-family: Montserrat-Regular;
- font-size: 1.2em;
- border: 0;
- border-bottom: 2px solid #C4C4C4;
- color: #C4C4C4;
- margin-bottom: 1em;
+  width: 85vw;
+  padding: 1em 0;
+  font-family: Montserrat-Regular;
+  font-size: 1.2em;
+  border: 0;
+  border-bottom: 2px solid #C4C4C4;
+  color: #C4C4C4;
+  margin-bottom: 1em;
 }
 .buttonRegistrar{
   width: 80vw;

@@ -10,7 +10,7 @@
     <div class="iconHome" *ngIf="!formRegistro.valid"></div>
   </div>
   <h1>{{titulo}}</h1>
-  
+
   <form enctype="multipart/form-data" #formRegistro="ngForm" class="formReg" (submit)="onSubmit(formRegistro)">
     <div class="imagenForm">
       <input class="foto" type="file" name="imagen" #imagen="ngModel" [(ngModel)]="usuarioNuevo.imagen">
