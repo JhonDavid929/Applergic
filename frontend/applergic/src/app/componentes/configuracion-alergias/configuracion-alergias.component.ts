@@ -11,9 +11,11 @@ import { Usuario } from 'src/app/entidades/usuario';
 })
 export class ConfiguracionAlergiasComponent implements OnInit {
 
+  private readonly SELECTED_CLASS = 'selected';
   public allergyLetters: string[];
   public foodObjects = {};
   public selectedButton: boolean;
+  public allergyStatus = {};
 
   constructor(
     private alergiasService: AlergiasService
@@ -26,27 +28,42 @@ export class ConfiguracionAlergiasComponent implements OnInit {
     console.log('Allergy letters: ', this.allergyLetters);
     this.allergyLetters.forEach((letter: string) => {
       this.foodObjects[letter] = this.alergiasService.getFoods(letter);
+
+      // Creacion del estado para letra actual y objeto con los estados de cada elemento
+      this.allergyStatus[letter] = {
+        letterStatus: false,
+        foods: {}
+      };
+      // Crear estados de cada alimento para letra actual
+      this.foodObjects[letter].subscribe((foods: Alimento[]) => {
+        foods.forEach((food: Alimento) => {
+          this.allergyStatus[letter].foods[food.nombre] = false;
+        });
+      });
     });
   }
 
-  deselectAllergy(id, cond) {
-    if (this.selectedButton === true) {
-      document.getElementById(id).style.color = 'rgb(168, 168, 168)';
-      document.getElementById(id).style.background = 'rgb(255, 255, 255)';
-    }
+  toggleAllergyStatus(letter: string, foodName: string) {
+    const currentStatus = this.allergyStatus[letter].foods[foodName];
+
+    this.allergyStatus[letter].foods[foodName] = !currentStatus;
+
+    this.allergyStatus[letter].letterStatus = !Object.keys(this.allergyStatus[letter].foods).every((foodName: string) => {
+      return !this.allergyStatus[letter].foods[foodName];
+    });
+    console.log('EstadoActual', this.allergyStatus);
   }
-  selectAllergy(id, cond) {
-    if (this.selectedButton === false) {
-      const letterId = id.charAt(0);
-      console.log(letterId);
-      document.getElementById(id).style.color = 'rgb(255, 255, 255)';
-      document.getElementById(id).style.background = 'rgb(248, 73, 113)';
-      const element0: HTMLScriptElement = document.getElementsByClassName(letterId)[0] as HTMLScriptElement;
-      element0.style.background = 'rgb(248, 73, 113)';
-      const element1: HTMLScriptElement = document.getElementsByClassName(letterId)[1] as HTMLScriptElement;
-      element1.style.background = 'rgb(248, 73, 113)';
-      this.selectedButton = true;
-    }
+
+  getLetterClass(letter: string) {
+    return {
+      [this.SELECTED_CLASS]: this.allergyStatus[letter].letterStatus
+    };
+  }
+
+  getFoodClass(letter: string, foodName: string) {
+    return {
+      [this.SELECTED_CLASS]: this.allergyStatus[letter].foods[foodName]
+    };
   }
 }
 

@@ -9,25 +9,10 @@
 
     <h1 class="main-title">Ahora selecciona tus alergias e intolerancias.</h1>
     <p class="main-paragraph">Los elementos marcados serán identificados en tus busquedas como peligrosos para ti.</p>
-    <div class="alphabet">
-        <div class="alphabet-row">
-            <div *ngFor='let letter of allergyLetters | slice:0:4' class="letter-link {{letter}}">
-                <a href="/alergias{{'#'+letter}}">{{letter}}</a>
-            </div>
-        </div>
-        <div class="alphabet-row">
-            <div *ngFor='let letter of allergyLetters | slice:4:8' class="letter-link {{letter}}">
-                <a href="/alergias{{'#'+letter}}">{{letter}}</a>
-            </div>
-        </div>
-        <div class="alphabet-row">
-            <div *ngFor='let letter of allergyLetters | slice:8:12' class="letter-link {{letter}}">
-                <a href="/alergias{{'#'+letter}}">{{letter}}</a>
-            </div>
-        </div>
-        <div class="alphabet-row">
-            <div *ngFor='let letter of allergyLetters | slice:12:16' class="letter-link {{letter}}">
-                <a href="/alergias{{'#'+letter}}">{{letter}}</a>
+    <div class="row alphabet">
+        <div *ngFor="let letter of allergyLetters" class="col-xs-3 alphabet-letter">
+            <div [ngClass]="getLetterClass(letter)" class="letter-link">
+                <a href="/alergias{{'#'+letter}}">{{ letter }}</a>
             </div>
         </div>
         <p class="panel-text">Acceso rápido.</p>
@@ -35,13 +20,14 @@
     <div>
         <div *ngFor="let letter of allergyLetters;" class="list-container">
             <div class="list-header">
-                <div id={{letter}} class="{{letter}} index-letter">{{letter}}</div>
+                <div [ngClass]="getLetterClass(letter)" id={{letter}} class="index-letter">{{letter}}</div>
                 <a href="/alergias#main-container" class="arrow">
                     <img src="assets/imagenes/seleccion-alergias/arrowUp.png">
                 </a>
             </div>
             <div *ngIf="foodObjects[letter] | async as foods" class="allergies-container">
-                <button *ngFor="let food of foods" (click)="[selectAllergy($event.target.id, selectedButton)];[deselectAllergy($event.target.id, selectedButton)]" class="allergies-button" id={{food.nombre}}>{{ food.nombre }}</button>
+                <button *ngFor="let food of foods" [ngClass]="getFoodClass(letter, food.nombre)" (click)="toggleAllergyStatus(letter, food.nombre)"
+                class="allergies-button" id={{food.nombre}}>{{ food.nombre }}</button>
             </div>
         </div>
     </div>
