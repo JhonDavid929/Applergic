@@ -26,6 +26,7 @@ import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/c
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
 import { ResultadoServicio } from './servicios/resultadoServicio';
 import { EscanerComponent } from './componentes/escaner/escaner.component';
+import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { EscanerComponent } from './componentes/escaner/escaner.component';
     EscanerComponent,
     FinRegistroComponent,
     ContrasenaOlvidadaComponent,
+    ConfirmacionAlergiasComponent
 
   ],
   imports: [
@@ -49,6 +51,7 @@ import { EscanerComponent } from './componentes/escaner/escaner.component';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule
     HttpClientModule,
     MatSidenavModule,
     MatListModule,

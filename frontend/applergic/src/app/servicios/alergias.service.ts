@@ -14,7 +14,7 @@ export class AlergiasService {
   ) { }
 
   getFoods(letter: string) {
-    return this.http.get('http://127.0.0.1:4000/api/usuarios/alimentos/' + letter);
+    return this.http.get('http://127.0.0.1:4000/api/alimentos/' + letter);
   }
 
   getAllergyLetters() {

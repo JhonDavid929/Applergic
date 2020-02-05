@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { IntroduccionComponent } from './componentes/introduccion/introduccion.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario.component';
@@ -10,6 +10,13 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.component';
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
+import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64],
+};
 
 const routes: Routes = [
   {
@@ -38,6 +45,10 @@ const routes: Routes = [
     component:  ConfiguracionAlergiasComponent
   },
   {
+    path: 'confirmacion-alergias',
+    component:  ConfirmacionAlergiasComponent
+  },
+  {
     path: 'home',
     component: HomeComponent
   },
@@ -61,7 +72,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
