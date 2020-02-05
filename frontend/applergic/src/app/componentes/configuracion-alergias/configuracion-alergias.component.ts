@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Alimento } from '../../entidades/alimento';
 import { AlergiasService } from '../../servicios/alergias.service';
 import { Observable } from 'rxjs';
+import { Usuario } from 'src/app/entidades/usuario';
 
 @Component({
   selector: 'app-configuracion-alergias',

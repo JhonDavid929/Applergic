@@ -25,5 +25,4 @@ export class PersonaEmergenciaServicio {
         console.log(persona)
         return persona;
     }
-
 }

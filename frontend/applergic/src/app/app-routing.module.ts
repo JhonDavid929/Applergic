@@ -73,12 +73,12 @@ const routes: Routes = [
   {
     path: 'escaneo',
     component: ResultadoEscanerComponent
+
   },
   {
     path: 'lectores',
     component: LectorQrNFCComponent
   }
-
 ];
 
 

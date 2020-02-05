@@ -18,23 +18,9 @@ let Usuario = new Schema({
         type: String,
     },
     alimentos:{
-        type: Array,
+        type: [Schema.Types.ObjectId],
+        ref: 'Alimento'
     },
-    seguro: {
-        compania: String,
-        poliza: String
-    },
-    contactoEmergencia: {
-        nombre: {
-            type: String
-        },
-        email: {
-            type: String
-        },
-        movil: {
-            type: String
-        }
-    }
 });
 
 module.exports = mongoose.model('Usuario', Usuario);

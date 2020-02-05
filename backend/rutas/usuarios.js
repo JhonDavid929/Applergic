@@ -76,14 +76,19 @@ rutasAPI.route("/editar/:id").put(function(req,res){
     }).then(res=>res).catch(err=>err)
 });
 
-//SACAR USUARIOS (metodo get para ver los Usuarios que estan en la BBDD)
-rutasAPI.route("/").get(function(reqPeticionHttp, resRespuestaHttp){
-    Usuario.find(function(err, colecionUsuarios){
-        if(err){
-            resRespuestaHttp.json(err);
-        }else{          
-            resRespuestaHttp.json(colecionUsuarios)
-        }
+//SACAR USUARIOS
+rutasAPI.route("/").get((req, res) => {
+    Usuario.find({}, (err, usuarios) => {
+        console.log(usuarios+'stop')
+        Alimento.populate(usuarios, {path: "alimentos"}, (err, usuario) => {
+            console.log(usuario)
+            if(err){
+                res.json(err);
+            }else{
+                console.log(usuario)
+                res.json(usuario)
+            }
+        })
     })
 })
 

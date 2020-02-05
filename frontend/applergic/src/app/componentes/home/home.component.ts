@@ -8,16 +8,15 @@ import { Usuario } from 'src/app/entidades/usuario';
 })
 export class HomeComponent implements OnInit {
 
-  public usuarioLogado;
+  public usuarioLogado: Usuario;
 
   constructor() { 
  
   }
 
   ngOnInit() {
-    let user = JSON.parse(sessionStorage.getItem("usuario"));
-    console.log(user.nombre)
     this.usuarioLogado = JSON.parse(sessionStorage.getItem("usuario"))
+    console.log(this.usuarioLogado)
   }
 
 }
