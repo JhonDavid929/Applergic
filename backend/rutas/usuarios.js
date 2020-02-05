@@ -21,8 +21,8 @@ function recibirDatosRegistroPost(req, res){
     promesaGuardado.then(Usuario => {
         console.log("Se ha registrado en base de datos ");
 
-        res.status(200).json({ "usuario": "CREADO SATISFACTORIAMENTE Applergic"
-
+        res.status(200).json({
+            usuario: Usuario._id
         })
     })
     promesaGuardado.catch(err =>{
@@ -96,14 +96,15 @@ rutasAPI.route('/login').post((req, res) => {
         console.log(user);
         if(err){
             res.json({
-                valido: "no",
+                valido: "El email o la contraseña con incorrectos",
                 usuario: user
             }
             );
         }else{
             if(user !== null){
                 res.json({
-                    valido: "Es valido"
+                    valido: "Es valido",
+                    usuario: user
                 })
             } else {
                 console.log('El email o la contraseña son incorrectos');

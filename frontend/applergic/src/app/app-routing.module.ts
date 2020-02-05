@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { IntroduccionComponent } from './componentes/introduccion/introduccion.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { CrearUsuarioComponent } from './componentes/crear-usuario/crear-usuario.component';
@@ -11,6 +11,16 @@ import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.co
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
 import { EscanerComponent } from './componentes/escaner/escaner.component';
+<<<<<<< HEAD
+=======
+import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64],
+};
+>>>>>>> d0749603f4fd7400030b4800baf50678e3819521
 
 const routes: Routes = [
   {
@@ -39,6 +49,10 @@ const routes: Routes = [
     component:  ConfiguracionAlergiasComponent
   },
   {
+    path: 'confirmacion-alergias',
+    component:  ConfirmacionAlergiasComponent
+  },
+  {
     path: 'home',
     component: HomeComponent
   },
@@ -55,8 +69,13 @@ const routes: Routes = [
     component: ContrasenaOlvidadaComponent
   },
   {
+    path: 'escaner',
+    component: EscanerComponent
+  },
+  {
     path: 'escaneo',
     component: ResultadoEscanerComponent
+<<<<<<< HEAD
 
   },
 
@@ -64,11 +83,15 @@ const routes: Routes = [
     path: 'escaner',
     component: EscanerComponent
   }
+=======
+  },
+>>>>>>> d0749603f4fd7400030b4800baf50678e3819521
 ];
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

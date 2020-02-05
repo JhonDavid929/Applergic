@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,8 +24,13 @@ import { FinRegistroComponent } from './componentes/fin-registro/fin-registro.co
 import { AlergiasService } from './servicios/alergias.service';
 import { ContrasenaOlvidadaComponent } from './componentes/contrasena-olvidada/contrasena-olvidada.component';
 import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resultado-escaner.component';
-import { ResultadoServicio } from './servicios/resultadoServicio';
 import { EscanerComponent } from './componentes/escaner/escaner.component';
+import { ResultadoServicio } from './servicios/resultadoServicio';
+<<<<<<< HEAD
+import { EscanerComponent } from './componentes/escaner/escaner.component';
+=======
+import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
+>>>>>>> d0749603f4fd7400030b4800baf50678e3819521
 
 @NgModule({
   declarations: [
@@ -38,7 +47,8 @@ import { EscanerComponent } from './componentes/escaner/escaner.component';
     InicioComponent,
     EscanerComponent,
     FinRegistroComponent,
-    ContrasenaOlvidadaComponent
+    ContrasenaOlvidadaComponent,
+    ConfirmacionAlergiasComponent
 
   ],
   imports: [
@@ -47,6 +57,8 @@ import { EscanerComponent } from './componentes/escaner/escaner.component';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
     RouterModule.forRoot([],{
       anchorScrolling: 'enabled'
     })

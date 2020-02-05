@@ -1,6 +1,38 @@
+.barra_superior {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.3em;
+    margin-left: 1em;
+    margin-right: 1.3em;
+}
+
+.desplegable {
+    border: none;
+}
+
+mat-sidenav {
+    width: 239px;
+    height: 432px;
+    box-shadow: 1px 1px 6px rgb(16, 177, 213);
+}
+
+.elemento {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0.2em;
+    padding-right: 5em;
+    margin: none;
+}
+
+/*
+Grecia, por debajo de este comentario encontrarás todo tu código CSS original del componente. He comentado el "main content" porque me daba error con la barra lateral
+*/
+
+/*
 .main-content {
     position: absolute;
 }
+*/
 
 .logo {
     display: block;

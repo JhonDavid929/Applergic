@@ -1,4 +1,4 @@
-<div class="main-container">
+<div id="main-container" class="main-container">
     <div class="back-option">
         <a routerLink="/registro" class="volver">
             <img class="back-arrow" src="assets/imagenes/navegacion/arrow-left.svg" alt="Volver">
@@ -11,74 +11,41 @@
     <p class="main-paragraph">Los elementos marcados serán identificados en tus busquedas como peligrosos para ti.</p>
     <div class="alphabet">
         <div class="alphabet-row">
-            <div class="letter-link">
-                <a href="">A</a>
-            </div>
-            <div class="letter-link">
-                <a href="">C</a>
-            </div>
-            <div class="letter-link">
-                <a href="">F</a>
-            </div>
-            <div class="letter-link">
-                <a href="">G</a>
+            <div *ngFor='let letter of allergyLetters | slice:0:4' class="letter-link {{letter}}">
+                <a href="/alergias{{'#'+letter}}">{{letter}}</a>
             </div>
         </div>
         <div class="alphabet-row">
-            <div class="letter-link">
-                <a (click)="scroll(section)" href="">H</a>
-            </div>
-            <div class="letter-link">
-                <a href="">K</a>
-            </div>
-            <div class="letter-link">
-                <a href="">L</a>
-            </div>
-            <div class="letter-link">
-                <a href="">M</a>
+            <div *ngFor='let letter of allergyLetters | slice:4:8' class="letter-link {{letter}}">
+                <a href="/alergias{{'#'+letter}}">{{letter}}</a>
             </div>
         </div>
         <div class="alphabet-row">
-            <div class="letter-link">
-                <a href="">N</a>
-            </div>
-            <div class="letter-link">
-                <a href="">P</a>
-            </div>
-            <div class="letter-link">
-                <a href="">R</a>
-            </div>
-            <div class="letter-link">
-                <a href="">S</a>
+            <div *ngFor='let letter of allergyLetters | slice:8:12' class="letter-link {{letter}}">
+                <a href="/alergias{{'#'+letter}}">{{letter}}</a>
             </div>
         </div>
         <div class="alphabet-row">
-            <div class="letter-link">
-                <a href="">T</a>
-            </div>
-            <div class="letter-link">
-                <a href="">U</a>
-            </div>
-            <div class="letter-link">
-                <a href="">V</a>
-            </div>
-            <div class="letter-link">
-                <a href="">Y</a>
+            <div *ngFor='let letter of allergyLetters | slice:12:16' class="letter-link {{letter}}">
+                <a href="/alergias{{'#'+letter}}">{{letter}}</a>
             </div>
         </div>
+        <p class="panel-text">Acceso rápido.</p>
     </div>
-    <p class="panel-text">Acceso rápido.</p>
     <div>
-        <div *ngFor="let letter of allergyLetters">
+        <div *ngFor="let letter of allergyLetters;" class="list-container">
             <div class="list-header">
-                <div class="index-letter">{{letter}}</div>
-                <a class="arrow"></a>
+                <div id={{letter}} class="{{letter}} index-letter">{{letter}}</div>
+                <a href="/alergias#main-container" class="arrow">
+                    <img src="assets/imagenes/seleccion-alergias/arrowUp.png">
+                </a>
             </div>
-            <div *ngIf="foodObjects[letter] | async as foods">
-                <span *ngFor="let food of foods" class="allergies-button">{{ food.nombre }}</span>
+            <div *ngIf="foodObjects[letter] | async as foods" class="allergies-container">
+                <button *ngFor="let food of foods" (click)="[selectAllergy($event.target.id, selectedButton)];[deselectAllergy($event.target.id, selectedButton)]" class="allergies-button" id={{food.nombre}}>{{ food.nombre }}</button>
             </div>
         </div>
     </div>
-    <div #section>Prueba de salto</div>
-    <button class="accept-button">Guardar</button>
+    <div class="button-container">
+        <button routerLink="/confirmacion-alergias" routerLinkActive="router-link-active"  class="accept-button">Guardar</button>
+    </div>
 </div>
