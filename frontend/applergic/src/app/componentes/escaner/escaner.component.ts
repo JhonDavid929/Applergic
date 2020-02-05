@@ -26,6 +26,7 @@ export class EscanerComponent implements OnInit {
   escanearProducto(form){
     this.resultadoServicio.getProducto(this.producto.codigoBarras, producto => {
       this.producto = producto;
+      sessionStorage.setItem("product", JSON.stringify(producto));
     });
   }
 
