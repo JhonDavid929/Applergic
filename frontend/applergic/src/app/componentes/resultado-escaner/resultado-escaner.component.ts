@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ResultadoServicio } from '../../servicios/resultadoServicio';
 import { Producto } from '../../entidades/producto';
 import { Router } from '@angular/router';
+import { Usuario } from 'src/app/entidades/usuario';
 
 @Component({
   selector: 'app-resultado-escaner',
@@ -12,38 +13,46 @@ import { Router } from '@angular/router';
 export class ResultadoEscanerComponent implements OnInit {
 
   public producto: Producto;
+  public user: Usuario;
+  private vistaApto: Number;
 
   constructor(private resultadoServicio: ResultadoServicio, private router: Router) {
     this.producto = JSON.parse(sessionStorage.getItem("producto"))
-    
+    this.user = JSON.parse(sessionStorage.getItem("usuario"))
   }
 
   ngOnInit() {
-    let vista1 = document.getElementById("vista1");
-    let vista2 = document.getElementById("vista2");
-    let vista3 = document.getElementById("vista3");
-    console.log(this.producto.ingredientes)
+    this.vistaApto = -1;
     this.pintarVistas();
   }
 
-  redirigir(){
+  redirigir() {
     this.router.navigate(['escaner']);
   }
 
-  pintarVistas(){
-    let vista1 = document.getElementById("vista1");
-    let vista2 = document.getElementById("vista2");
-    let vista3 = document.getElementById("vista3");
+  pintarVistas() {
 
-    if(this.producto.ingredientes.length === 0){
-      vista2.style.display = "none";
-      vista3.style.display = "none";
-    } else if(this.producto.ingredientes){
-      vista1.style.display = "none";
-      vista3.style.display = "none";
-    }else{
-      vista1.style.display = "none";
-      vista2.style.display = "none";
+    //let apto;
+    //alert(this.producto.ingredientes.length);
+
+    if ( !this.producto) {
+      this.vistaApto = 3;
+    } else {
+      let existe = false;
+      let arrayAlimUsuario = this.user.alimentos;
+      let arrayProducto = this.producto.ingredientes;
+      for (let i = 0; i < arrayAlimUsuario.length; i++) {
+        if (arrayProducto.indexOf(arrayAlimUsuario[i]) >= 0) {
+          existe = true;
+        }
+      }
+      if (existe) {
+        // Si no coincide ninguno, se puede comer
+        this.vistaApto = 2;
+      } else {
+        // Si coincide alguno, NO se puede comer
+        this.vistaApto = 1;
+      }
     }
   }
 }

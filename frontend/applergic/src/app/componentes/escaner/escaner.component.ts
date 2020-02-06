@@ -24,6 +24,7 @@ export class EscanerComponent implements OnInit {
   }
 
   escanearProducto(form){
+    sessionStorage.removeItem("producto");
     this.resultadoServicio.getProducto(this.producto.codigoBarras, producto => {
       this.producto = producto;
       console.log(producto)

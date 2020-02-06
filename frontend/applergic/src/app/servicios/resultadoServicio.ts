@@ -18,7 +18,8 @@ export class ResultadoServicio{
                 callback(datos.producto);
                 this.router.navigate(['escaneo']);
               }else{
-                alert(datos.mensaje)
+                console.log(datos.mensaje)
+                this.router.navigate(['escaneo']);
               }
         })
     }

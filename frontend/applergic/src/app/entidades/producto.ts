@@ -1,6 +1,6 @@
 export class Producto {
     nombre: string;
-    ingredientes: [];
+    ingredientes: String[];
     codigoBarras: string;
     imagen: string;
 }
