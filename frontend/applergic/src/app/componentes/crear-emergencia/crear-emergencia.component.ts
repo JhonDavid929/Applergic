@@ -29,6 +29,7 @@ export class CrearEmergenciaComponent implements OnInit {
       poliza: ""
     }
     this.usuarioRegistrado = {
+      "_id": "",
       nombre: "",
       email: "",
       movil: "",

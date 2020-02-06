@@ -19,6 +19,7 @@ export class CrearUsuarioComponent {
   constructor(private usuarioServicio: UsuarioServicio, private router: Router){
     this.valido = false;
     this.usuarioNuevo = {
+      "_id": "",
       "nombre": "",
       "email": "",
       "movil": "",

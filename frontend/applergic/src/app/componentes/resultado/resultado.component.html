@@ -15,6 +15,14 @@
             <p class="slide-desc">{{ slide.description }}</p>
         </div>
     </!--ng-container-->
+    <ng-container *ngFor="let productview of productviews">
+        <div *ngIf="verify">
+            <p>{{productview.description}}</p>
+            <img [src]="productview.image" alt="">
+        </div>
+    </ng-container>
+    <p>{{producto.nombre}}</p>
+    <p>{{producto.ingredientes}}</p>
     <div>
         <img src="assets/imagenes/resultado/favorito.png" alt="">
         <img src="assets/imagenes/resultado/diario.png" alt="">
