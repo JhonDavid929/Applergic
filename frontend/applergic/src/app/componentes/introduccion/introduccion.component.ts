@@ -16,7 +16,7 @@ export class IntroduccionComponent implements OnInit {
     },
     {
       image: 'assets/imagenes/intro/rectangle.png',
-      description: 'LLeva tu Diario de compras y actividades.'
+      description: 'Lleva tu Diario de compras y actividades.'
     },
     {
       image: 'assets/imagenes/intro/ambulancia.png',

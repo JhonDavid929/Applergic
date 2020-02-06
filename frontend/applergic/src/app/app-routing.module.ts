@@ -13,6 +13,7 @@ import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resul
 import { EscanerComponent } from './componentes/escaner/escaner.component';
 import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
 import { LectorQrNFCComponent } from './componentes/lector-qr-nfc/lector-qr-nfc.component';
+import { ResultadoComponent } from './componentes/resultado/resultado.component';
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -78,6 +79,10 @@ const routes: Routes = [
   {
     path: 'lectores',
     component: LectorQrNFCComponent
+  },
+  {
+    path: 'resultado',
+    component: ResultadoComponent
   }
 ];
 

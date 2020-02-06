@@ -1,0 +1,61 @@
+.navigation-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 69px;
+}
+
+.volver{
+    font-size: .9em;
+    color: rgb(38, 199, 220);
+    text-decoration: none;
+    margin-left: 16px;
+} 
+
+.back-arrow {
+    font-weight: lighter;
+    vertical-align: middle;
+    color: rgb(38, 199, 220);
+}
+
+.back-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.close-button {
+    margin-right: 24px;
+    margin-bottom: 8px;
+}
+
+.main-title {
+    width: 178px;
+    height: 50px;
+    margin: 0 auto;
+    color: rgb(7, 15, 21);
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button-container {
+width: 375px;
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 80px;
+}
+
+.accept-button {
+    width: 325px;
+    height: 50px;
+    border-style:none;
+    border-radius: 8px;
+    background-color: rgb(38, 199, 220);
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}

@@ -1,0 +1,26 @@
+<div>
+    <div class="navigation-options">
+        <a routerLink="/escaner" class="volver">
+            <img class="back-arrow" src="assets/imagenes/navegacion/arrow-left.svg" alt="Volver">
+            <span class="back-text">Volver</span>
+        </a>
+        <a class="close-button" routerLink="/home">
+            <img src="assets/imagenes/resultado/close.png">
+        </a>
+    </div>
+    <h1 class="main-title">Aqui tienes el resultado.</h1>
+    <!--ng-container *ngFor="let slide of slides; index as i">
+        <div class="slide-container" *ngIf="i === currentIndex">
+            <img class="slide-image" [src]="slide.image">
+            <p class="slide-desc">{{ slide.description }}</p>
+        </div>
+    </!--ng-container-->
+    <div>
+        <img src="assets/imagenes/resultado/favorito.png" alt="">
+        <img src="assets/imagenes/resultado/diario.png" alt="">
+        <img src="assets/imagenes/resultado/red.png" alt="">
+    </div>
+    <div class="button-container">
+        <button class="accept-button" (click)="goToConfirmAllergies()">Guardar</button>
+    </div>
+</div>
