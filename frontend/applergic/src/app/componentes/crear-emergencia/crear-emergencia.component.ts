@@ -28,7 +28,14 @@ export class CrearEmergenciaComponent implements OnInit {
       compania: "",
       poliza: ""
     }
-    this.usuarioRegistrado = JSON.parse(sessionStorage.getItem("user"));
+    this.usuarioRegistrado = {
+      nombre: "",
+      email: "",
+      movil: "",
+      password: "",
+      imagen: "",
+      alimentos: [],
+      }
   }
 
   ngOnInit() {

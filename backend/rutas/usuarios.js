@@ -4,7 +4,8 @@ const cors = require('cors');
 const app = express();
 const db = require('../config/bbdd');
 const Usuario = require('../modelos/Usuario');
-const mogoose = require('mongoose');
+const Alimento = require('../modelos/Alimento');
+const mongoose = require('mongoose');
 const multipart = require('connect-multiparty')
 const multipartMiddlware = multipart({uploadDir: './uploads'})
 
