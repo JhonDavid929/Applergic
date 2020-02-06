@@ -122,4 +122,36 @@ rutasAPI.route('/login').post((req, res) => {
     });
 })
 
+//BUSCAR USUARIO E INSERTARLE ALERGIAS
+rutasAPI.route("/insertar-alimento/:id").put((req, res) => {
+    let id = req.params.id;
+    let alimentos = req.body;
+    console.log(alimentos);
+
+    Usuario.findById(id, (err, user) => {
+        console.log(user);
+        if(err){
+            res.json(err)
+        }else{
+            let alimentosUser = user.alimentos;
+            console.log(alimentosUser);
+            let combinacion = alimentosUser.concat(alimentos);
+            let arrayInsertar = combinacion.filter((elem, pos) => {
+                return combinacion.indexOf(elem) == pos;
+            })
+            // for(let i = 0; i < alimentos.length; i++){
+            //     if(alimentosUser.indexOf(alimentos[i]) == -1){
+            //         alimentosUser.push(alimentos[i]);
+            //         console.log(alimentosUser,"11111111111111")
+            //     }
+            // }
+            console.log(arrayInsertar,"11111111111111")
+            user.alimentos = arrayInsertar;
+            console.log(user.alimentos);
+            user.save();
+            res.json("SE HA EDITADO");
+        }
+    })
+})
+
 module.exports = rutasAPI;

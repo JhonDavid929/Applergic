@@ -34,7 +34,6 @@ export class UsuarioServicio {
     let headers = new HttpHeaders().set('Content-Type', 'application/json')
     let obj = this.clienteHttp.post<any>("http://127.0.0.1:4000/api/usuarios/login", usuario, {headers: headers});
     obj.subscribe(datos =>{
-
       if(datos.valido === "incorrecto"){
         alert(datos.valido);
       }else{

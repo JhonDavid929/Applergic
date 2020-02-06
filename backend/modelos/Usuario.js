@@ -18,8 +18,7 @@ let Usuario = new Schema({
         type: String,
     },
     alimentos:{
-        type: [Schema.Types.ObjectId],
-        ref: 'Alimento'
+        type: [],
     },
 });
 
