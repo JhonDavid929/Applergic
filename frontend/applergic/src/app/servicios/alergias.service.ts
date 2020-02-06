@@ -27,10 +27,11 @@ export class AlergiasService {
   }
 
   insertSelectedAlergy(foodName: string) {
-    // TOOD: myObj[xxx] = true
+    return this.selectedAlergies[foodName] = true;
   }
 
   removeSelectedAlergy(foodName: string) {
-    // TODO: delete myObj[xxx]
+    delete this.selectedAlergies[foodName];
+    return false;
   }
 }

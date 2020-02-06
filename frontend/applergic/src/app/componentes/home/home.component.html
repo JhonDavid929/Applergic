@@ -1,66 +1,91 @@
 <mat-sidenav-container>
-    <mat-sidenav [(opened)]="opened">
-        <div class="elemento">
-            <p>X</p>
-        </div>
-        <div class="elemento">
-            <img src="../../../assets/imagenes/home/user-solid.svg" height="30px" width="30px">
-            <p>Perfil</p>
-        </div>
-        <div class="elemento">
-            <img src="../../../assets/imagenes/home/favorito@3x.png" height="30px" width="30px">
-            <p>Favoritos</p>
-        </div>
-        <div class="elemento">
-            <img src="../../../assets/imagenes/home/diario@3x.png" height="30px" width="30px">
-            <p>Diario</p>
-        </div>
-        <div class="elemento">
-            <img src="../../../assets/imagenes/home/red@3x.png" height="30px" width="30px">
-            <p>Compartir</p>
-        </div>
-        <div class="elemento">
-            <img src="../../../assets/imagenes/home/language-solid.svg" height="30px" width="30px">
-            <p>Traductor</p>
-        </div>
-        <div class="elemento">
-            <img src="../../../assets/imagenes/home/file-alt-regular.svg" height="30px" width="30px">
-            <p>Términos</p>
-        </div>
-        <div class="elemento">
-            <img src="../../../assets/imagenes/home/sign-out-alt-solid.svg" height="30px" width="30px">
-            <p>Salir</p>
+    <mat-sidenav [(opened)]="opened" #sidenav routerLink="/home" (click)="sidenav.close()">
+        <a>
+            <img class="close-icon" src="assets/imagenes/home/close.png">
+        </a>
+        <div class="menu-container">
+            <div class="elemento">
+                <img class="img-menu-item" src="assets/imagenes/home/user-solid.svg" height="33px" width="33px">
+                <span class="text-menu-item margin">Perfil</span>
+            </div>
+            <div class="elemento">
+                <img src="assets/imagenes/home/favorito@3x.png" height="45px" width="45px">
+                <span class="text-menu-item">Favoritos</span>
+            </div>
+            <div class="elemento">
+                <img src="assets/imagenes/home/diario@3x.png" height="45px" width="45px">
+                <span class="text-menu-item">Diario</span>
+            </div>
+            <div class="elemento">
+                <img src="assets/imagenes/home/red@3x.png" height="45px" width="45px">
+                <span class="text-menu-item">Compartir</span>
+            </div>
+            <div class="elemento">
+                <img src="assets/imagenes/home/language-solid.svg" height="39px" width="39px">
+                <span class="text-menu-item margin">Traductor</span>
+            </div>
+            <div class="elemento">
+                <img src="/assets/imagenes/home/file-alt-regular.svg" height="39px" width="39px">
+                <span class="text-menu-item margin">Términos</span>
+            </div>
+            <div class="elemento">
+                <img src="assets/imagenes/home/sign-out-alt-solid.svg" height="39px" width="39px">
+                <span class="text-menu-item margin">Salir</span>
+            </div>
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
-        <div class ="barra_superior">
-            <button class="desplegable" (click)="opened=!opened"><img src ="../../../assets/imagenes/home/menAzul@2x.png" height="30px" width="30px"></button>         
-            <img src = "../../../assets/imagenes/home/gris@2x.png" height="27px" width="27px" >
+        <div class="barra_superior">
+            <button class="desplegable" (click)="opened=!opened"><img src="../../../assets/imagenes/home/menAzul@2x.png"
+                    height="30px" width="30px"></button>
+            <img src="../../../assets/imagenes/home/gris.png"  height="32px" width="32px">
         </div>
         <!--A PARTIR DE AQUÍ, Y HASTA EL PRÓXIMO COMENTARIO, ES LO QUE TÚ TENÍAS, GRECIA-->
         <div class="main-content">
             <img class="logo" src="assets/imagenes/home/logoApplergicFinal.png" alt="Logo Home">
-            <button style="background-color: rgb(38, 199,220)" class="main-home-button">
+            <button class="main-home-button scanner-button">
                 <div class="button-content">
-                    <img class="button-img" src="assets/imagenes/home/barcode2.png" alt="" width="28" height="28">
+                    <img class="button-img" src="assets/imagenes/home/barcode2.png" alt="" width="56" height="56">
                     <span>Escanear</span>
                 </div>
             </button>
             <p class="button-paragrapgh">Escanea un nuevo producto.</p>
-            <button style="background-color: rgb(196, 196,196)" class="main-home-button">
+            <button class="main-home-button search-button">
                 <div class="button-content">
-                    <img class="button-img" src="assets/imagenes/home/buscar.png" alt="" width="28" height="28">
+                    <img class="button-img" src="assets/imagenes/home/buscar.png" alt="" width="40" height="40">
                     <span>Buscar</span>
                 </div>
             </button>
             <p class="button-paragrapgh">Busca un comercio o restaurante para ti.</p>
-            <button style="background-color: rgb(248, 73,113)" class="main-home-button">
+            <button class="main-home-button sos-button">
                 <div class="button-content">
-                    <img class="button-img" src="assets/imagenes/home/sos1.png" alt="" width="28" height="28">
+                    <img class="button-img" src="assets/imagenes/home/sos1.png" alt="" width="48" height="48">
                     <span>S.O.S</span>
                 </div>
             </button>
             <p class="button-paragrapgh">¿Necesitas ayuda urgente? contactamos con emergencias.</p>
+        </div>
+        <div class="bottom-nav">
+            <div>
+                <a>
+                    <img class="item-bottom-nav" src="assets/imagenes/home/home@2x.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a>
+                    <img class="item-bottom-nav" src="assets/imagenes/home/favorito.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a>
+                    <img class="item-bottom-nav" src="assets/imagenes/home/diario.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a>
+                    <img class="item-bottom-nav" src="assets/imagenes/home/red.png" alt="">
+                </a>
+            </div>
         </div>
         <!--ESTO DE AQUÍ ABAJO TAMBIÉN ES NUEVO-->
     </mat-sidenav-content>

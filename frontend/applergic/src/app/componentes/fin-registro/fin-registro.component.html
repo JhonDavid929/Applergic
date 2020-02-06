@@ -1,6 +1,6 @@
 <div>
   <div class="divVolver">
-    <a routerLink="/alergias" class="volver">
+    <a routerLink="/confirmacion-alergias" class="volver">
       <img class="back-arrow" src="assets/imagenes/navegacion/arrow-left.svg" alt="Volver">
       <span class="back-text">Volver</span>
     </a>
@@ -14,6 +14,6 @@
     <h1>Hemos terminado, ya puedes escanear tu primer producto</h1>
   </div>
   <div class="botonEscaneo">
-    <input type="button" value="Escanea un producto"  class="buttonRegistrar" (click)="onSubmit()"/>
+    <input routerLink="/escaner" type="button" value="Escanea un producto"  class="buttonRegistrar" (click)="onSubmit()"/>
   </div>
 </div>

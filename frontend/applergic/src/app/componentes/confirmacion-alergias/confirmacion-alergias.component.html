@@ -6,8 +6,8 @@
     <p class="main-paragraph">A continuación te resumimos los alimentos registrados como peligrosos para ti.</p>
     <p class="suggestion-paragraph">Marca para deseleccionar o añadir uno nuevo.</p>
     <div class="allergies-container">
-        <button></button>
+        <button *ngFor="let allergie of allergies" class="allergie">{{allergie}}</button>
     </div>
-    <button routerLink="/home" class="add-allergies">Añadir nuevos</button>
-    <button class="accept-button">Confirmar</button>
+    <button routerLink="/alergias" class="add-allergies">Añadir nuevos</button>
+    <button routerLink="/fin" class="accept-button">Confirmar</button>
 </div>

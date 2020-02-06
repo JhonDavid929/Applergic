@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Alimento } from '../../entidades/alimento';
 import { AlergiasService } from '../../servicios/alergias.service';
-import { Observable } from 'rxjs';
-import { Usuario } from 'src/app/entidades/usuario';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-configuracion-alergias',
@@ -14,14 +13,12 @@ export class ConfiguracionAlergiasComponent implements OnInit {
   private readonly SELECTED_CLASS = 'selected';
   public allergyLetters: string[];
   public foodObjects = {};
-  public selectedButton: boolean;
   public allergyStatus = {};
 
   constructor(
+    private router: Router,
     private alergiasService: AlergiasService
-  ) {
-    this.selectedButton = false;
-  }
+  ) {}
 
   ngOnInit() {
     this.allergyLetters = this.alergiasService.getAllergyLetters();
@@ -37,7 +34,8 @@ export class ConfiguracionAlergiasComponent implements OnInit {
       // Crear estados de cada alimento para letra actual
       this.foodObjects[letter].subscribe((foods: Alimento[]) => {
         foods.forEach((food: Alimento) => {
-          this.allergyStatus[letter].foods[food.nombre] = false;
+          this.allergyStatus[letter].foods[food.nombre] = !!this.alergiasService.getSelectedAlergies()[food.nombre];
+          this.setLetterStatus(letter);
         });
       });
     });
@@ -46,12 +44,19 @@ export class ConfiguracionAlergiasComponent implements OnInit {
   toggleAllergyStatus(letter: string, foodName: string) {
     const currentStatus = this.allergyStatus[letter].foods[foodName];
 
-    this.allergyStatus[letter].foods[foodName] = !currentStatus;
+    this.allergyStatus[letter].foods[foodName] = !currentStatus ?
+      this.alergiasService.insertSelectedAlergy(foodName) :
+      this.alergiasService.removeSelectedAlergy(foodName);
 
-    this.allergyStatus[letter].letterStatus = !Object.keys(this.allergyStatus[letter].foods).every((foodName: string) => {
-      return !this.allergyStatus[letter].foods[foodName];
-    });
+    this.setLetterStatus(letter);
+
     console.log('EstadoActual', this.allergyStatus);
+  }
+
+  setLetterStatus(letter: string) {
+    this.allergyStatus[letter].letterStatus = !Object.keys(this.allergyStatus[letter].foods).every((name: string) => {
+      return !this.allergyStatus[letter].foods[name];
+    });
   }
 
   getLetterClass(letter: string) {
@@ -64,6 +69,16 @@ export class ConfiguracionAlergiasComponent implements OnInit {
     return {
       [this.SELECTED_CLASS]: this.allergyStatus[letter].foods[foodName]
     };
+  }
+
+  hasSelectedAlergies() {
+    return Object.keys(this.alergiasService.getSelectedAlergies()).length > 0;
+  }
+
+  goToConfirmAllergies() {
+    if (this.hasSelectedAlergies()) {
+      this.router.navigate(['/confirmacion-alergias']);
+    }
   }
 }
 

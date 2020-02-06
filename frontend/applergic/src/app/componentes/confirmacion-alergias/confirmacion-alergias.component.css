@@ -25,6 +25,7 @@
     font-size: 15px;
     line-height: 24px;
     letter-spacing: 0.8px;
+    margin-bottom: 67px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -38,6 +39,25 @@
     font-weight: 500;
 }
 
+.allergies-container {
+    margin-left: 28px;
+    margin-bottom: 9px;
+}
+
+.allergie {
+    color: rgb(255, 255, 255);
+    background-color: rgb(248, 73, 113);
+    border: 1px solid rgb(248, 73, 113);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.32px;
+    border-radius: 20px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 12px 20px;
+}
+
 .add-allergies {
     color: rgb(168, 168, 168);
     background-color: rgb(255, 255, 255);
@@ -46,22 +66,22 @@
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 0.32px;
-    text-decoration: none;
     border-radius: 20px;
-    padding: 12px 20px;
+    margin-bottom: 100px;
     margin-left: 28px;
+    padding: 12px 20px;
 }
 
 .accept-button {
     width: 325px;
     height: 50px;
-    border-style:none;
+    border-color: rgb(38, 199, 220);
     border-radius: 8px;
     background-color: rgb(38, 199, 220);
     color: rgb(255, 255, 255);
     letter-spacing: 1px;
     font-weight: bold;
-    display: inline-block;
-    position: fixed;
-    bottom: 26px;
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
 }
