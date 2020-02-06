@@ -3,15 +3,23 @@
     <div> <!--Aqui esta la imagen de cabecera-->
         <img src="../../../assets/imagenes/resultado-escaner/cabeceraConLogo.png" alt="">
     </div>
+
     <div class="cont">
-
         <div class=" col-xs-3">
-                <img src="../../../assets/imagenes/resultado-escaner/volver.png" alt="">
-
-            </div> 
+            <!--aqui esta  la opcion volver-->
+            <div >
+                <button class="volver" [routerLink]='["/escaner"]'> 
+                    <img src="../../../assets/imagenes/resultado-escaner/volver.png" alt=""> </button> 
+            </div>    
+        </div> 
                 <div class="col-xs-3"> 
-              <img class='lado' src="../../../assets/imagenes/resultado-escaner/close.png" alt="">
-            </div>
+                    <!--Aqui estara el boton de  cerrar-->
+                    <div >
+                        <button class="volver" [routerLink]='["/home"]'> 
+                            <img class="lado" src="../../../assets/imagenes/resultado-escaner/close.png" alt=""> 
+                        </button> 
+                    </div>    
+                </div>
     </div>
 
     <div class="lado2">
@@ -23,10 +31,10 @@
         <img src="../../../assets/imagenes/resultado-escaner/esteProductoEsApt.png" alt="">
     </div>    
 
-    <!-- AQUI ESTA AGREGADO LA LATA DE NESQUIK Y LOS ICONOS QUE ESTAN AL LADO-->
+    <!-- AQUI ESTA AGREGADO el Cuadro verde-->
     <div class="cont1">
         <div class=" col-xs-3 ">
-        <img class="lado2" src="../../../assets/imagenes/resultado-escaner/nesquik.png" alt="">
+            <img class="ladocentro" src="../../../assets/imagenes/resultado-escaner/cuadro.png" alt="">
         </div>  
         <div class=" col-xs-3">
             <img src="../../../assets/imagenes/resultado-escaner/favorito.png" alt="">
@@ -36,25 +44,22 @@
 
     </div>  
 
-    <!--400-->
     <div class="lado3">
-  <h1>{{producto.nombre}}</h1>    
+         <h3>{{producto.nombre}}</h3>    
     </div>
 
-    <!--NESTLE-->
+    
     <div class="centro2">
         <h4> ingredientes</h4>        
     </div>
     
     <div class="centro3">
-       
         <p>{{producto.ingredientes}}</p>
     </div>
     
     <div class="centro3">
                 <!-- AQUI SE DECLARA LA RUTA QUE LO DEVOLVERA A LA RUTA QUE HA SIDO CREADA POR PACO-->
-    <button [routerLink]='["/escaner"]'><h2> Escanea otro producto </h2></button> 
-           
+        <button class="escaneobutton" [routerLink]='["/escaner"]'><h2 class="otro"> Escanea otro producto </h2></button> 
     </div>
 </div>
 
@@ -70,15 +75,26 @@
     <div> <!--Aqui esta la imagen de cabecera-->
         <img src="../../../assets/imagenes/resultado-escaner/cabeceraConLogo.png" alt="">
     </div>
+
     <div class="cont">
-
         <div class=" col-xs-3">
-                <img src="../../../assets/imagenes/resultado-escaner/volver.png" alt="">
+               <!--aqui esta  la opcion volver-->
+            <div >
+                <button class="volver" [routerLink]='["/escaner"]'> 
+                    <img src="../../../assets/imagenes/resultado-escaner/volver.png" alt=""> 
+                </button> 
+            </div>    
+        </div> 
 
-            </div> 
                 <div class="col-xs-3"> 
-              <img class='lado' src="../../../assets/imagenes/resultado-escaner/close.png" alt="">
-            </div>
+                       <!--Aqui estara el boton de  cerrar-->
+                    <div >
+                        <button class="volver" [routerLink]='["/home"]'> 
+                            <img class="lado" src="../../../assets/imagenes/resultado-escaner/close.png" alt=""> 
+                        </button> 
+                    </div>    
+              
+                </div>
     </div>
 
     <div class="lado2">
@@ -93,7 +109,7 @@
     <!-- AQUI ESTA AGREGADO LA LATA DE vino Y LOS ICONOS QUE ESTAN AL LADO-->
     <div class="cont1">
         <div class=" col-xs-3 ">
-        <img class="lado2" src="../../../assets/imagenes/resultado-escaner/vino.png" alt="">
+            <img class="ladocentro" src="../../../assets/imagenes/resultado-escaner/combinedShapeCopy.png" alt="">
         </div>  
         <div class=" col-xs-3">
             <img src="../../../assets/imagenes/resultado-escaner/favorito.png" alt="">
@@ -102,26 +118,25 @@
         </div>
 
     </div>  
+
     <div class="lado3">
-        <h1>{{producto.nombre}}</h1>    
-          </div>
+         <h3>{{producto.nombre}}</h3>    
+    </div>
       
-          <!--NESTLE-->
           <div class="centro2">
               <h4> ingredientes</h4>        
           </div>
           
           <div class="centro3">
-             
               <p>{{producto.ingredientes}}</p>
           </div>
           
           <div class="centro3">
                       <!-- AQUI SE DECLARA LA RUTA QUE LO DEVOLVERA A LA RUTA QUE HA SIDO CREADA POR PACO-->
-          <button [routerLink]='["/escaner"]'><h2> Escanea otro producto </h2></button> 
-                 
+            <button class="escaneobutton" [routerLink]='["/escaner"]'><h2 class="otro"> Escanea otro producto </h2></button>       
           </div>
-        </div>
+</div>
+
 
 
 
@@ -134,56 +149,64 @@
    <div> <!--Aqui esta la imagen de cabecera-->
     <img src="../../../assets/imagenes/resultado-escaner/cabeceraConLogo.png" alt="">
 </div>
+
 <div class="cont">
 
-    <div class=" col-xs-3">
-            <img src="../../../assets/imagenes/resultado-escaner/volver.png" alt="">
-
+        <div class=" col-xs-3">
+            <div>
+                <button class="volver" [routerLink]='["/escaner"]'> 
+                    <img src="../../../assets/imagenes/resultado-escaner/volver.png" alt=""> 
+                </button> 
+            </div>    
         </div> 
-            <div class="col-xs-3"> 
-          <img class='lado' src="../../../assets/imagenes/resultado-escaner/close.png" alt="">
-        </div>
+                <div class="col-xs-3"> 
+                    <!--Aqui esta el boton de  cerrar-->
+                    <div >
+                        <button class="volver" [routerLink]='["/home"]'> 
+                            <img class="lado" src="../../../assets/imagenes/resultado-escaner/close.png" alt=""> 
+                        </button> 
+                    </div>    
+                </div>
 </div>
 
 <div class="lado2">
-    <img src="../../../assets/imagenes/resultado-escaner/aquiTienesElResul.png" alt="">
-    
+    <img src="../../../assets/imagenes/resultado-escaner/aquiTienesElResul.png" alt=""> 
 </div>
 
-<div class="centro">
-    <img src="../../../assets/imagenes/resultado-escaner/loSentimosNoHay.png" alt="">
+<div >
+    <img class="noesapto" src="../../../assets/imagenes/resultado-escaner/loSentimosNoHay.png" alt="">
     
 </div>    
 
 
-<!-- AQUI ESTA AGREGADO LA LATA DE vino Y LOS ICONOS QUE ESTAN AL LADO-->
+<!-- AQUI ESTA AGREGADO el cuadro de la ultima vista -->
 <div class="cont1">
     <div class=" col-xs-3 ">
-    <img class="lado2" src="../../../assets/imagenes/resultado-escaner/megasurtidobrillo111.png" alt="">
+         <img class="ladocentro" src="../../../assets/imagenes/resultado-escaner/combinedShapeCopy2.png" alt="">
     </div>  
-    <div class=" col-xs-3">
-        <img src="../../../assets/imagenes/resultado-escaner/favorito.png" alt="">
-        <img src="../../../assets/imagenes/resultado-escaner/diario.png" alt="">
-        <img src="../../../assets/imagenes/resultado-escaner/red.png" alt="">
-    </div>
+        <div class=" col-xs-3">
+            <img src="../../../assets/imagenes/resultado-escaner/favorito.png" alt="">
+            <img src="../../../assets/imagenes/resultado-escaner/diario.png" alt="">
+            <img src="../../../assets/imagenes/resultado-escaner/red.png" alt="">
+        </div>
 
 </div>  
+
 <div class="lado3">
-    <h1>{{producto.nombre}}</h1>    
-      </div>
+    <h3>{{producto.nombre}}</h3>    
+</div>
   
-      <!--NESTLE-->
       <div class="centro2">
           <h4> ingredientes</h4>        
       </div>
       
       <div class="centro3">
-         
           <p>{{producto.ingredientes}}</p>
       </div>
       
       <div class="centro3">
                   <!-- AQUI SE DECLARA LA RUTA QUE LO DEVOLVERA A LA RUTA QUE HA SIDO CREADA POR PACO-->
-      <button [routerLink]='["/escaner"]'><h2> Escanea otro producto </h2></button> 
+      <button class="escaneobutton" [routerLink]='["/escaner"]'><h2 class="otro"> Escanea otro producto </h2></button> 
              
       </div>
+</div>      

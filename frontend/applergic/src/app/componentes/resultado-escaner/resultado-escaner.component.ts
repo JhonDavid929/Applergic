@@ -36,14 +36,15 @@ export class ResultadoEscanerComponent implements OnInit {
     let vista3 = document.getElementById("vista3");
 
     if(this.producto.ingredientes.length === 0){
-      vista2.style.display = "none";
-      vista3.style.display = "none";
+       vista2.style.display = "none";
+       vista3.style.display = "none";
     } else if(this.producto.ingredientes){
-      vista1.style.display = "none";
-      vista3.style.display = "none";
+       vista1.style.display = "none";
+       vista3.style.display = "none";
     }else{
-      vista1.style.display = "none";
-      vista2.style.display = "none";
+       vista1.style.display = "none";
+       vista2.style.display = "none";
+      
     }
   }
 }
