@@ -127,11 +127,13 @@ rutasAPI.route("/insertar-alimento/:id").put((req, res) => {
     let id = req.params.id;
     let alimentos = req.body;
     console.log(alimentos.alimentos);
-
+    console.log("Que carajo pasa")
     Usuario.findById(id, (err, user) => {
         console.log(user);
         if(err){
-            res.json(err)
+            res.json({
+                valido: "incorrecto"
+            })
         }else{
             let alimentosUser = user.alimentos;
             console.log("Usuario alimentos"+alimentosUser);
@@ -143,7 +145,10 @@ rutasAPI.route("/insertar-alimento/:id").put((req, res) => {
                 }
             }
             user.save();
-            res.json(user);
+            res.json({
+                valido: "correcto",
+                usuario: user
+            });
         }
     })
 })

@@ -9,5 +9,5 @@
         <button *ngFor="let allergie of allergies" class="allergie">{{allergie}}</button>
     </div>
     <button routerLink="/alergias" class="add-allergies">Añadir nuevos</button>
-    <button routerLink="/fin" class="accept-button">Confirmar</button>
+    <button routerLink="/fin" class="accept-button" (click)="saveAllergies()">Confirmar</button>
 </div>

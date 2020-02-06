@@ -42,4 +42,17 @@ export class UsuarioServicio {
       }
     })
   }
+
+  insertarAlimentos(id, usuario: Usuario){
+    let obj = this.clienteHttp.put<any>("http://127.0.0.1:4000/api/usuarios/insertar-alimento/"+id, usuario);
+    obj.subscribe(datos =>{
+      console.log(datos)
+      if(datos.valido === "incorrecto"){
+        alert(datos.valido);
+      }else{
+        console.log(datos.usuario.alimentos)
+        this.router.navigate(['fin']);
+      }
+    })
+  }
 }
