@@ -32,11 +32,6 @@ export class CrearEmergenciaComponent implements OnInit {
   }
 
   ngOnInit() {
-    //let user = JSON.parse(sessionStorage.getItem("user"));
-    // this.usuarioRegistrado = JSON.parse(sessionStorage.getItem("user"))
-    // console.log(this.usuarioRegistrado.usuario)
-    // this.personaEmergencia.usuario = this.usuarioRegistrado.usuario;
-    // console.log(this.personaEmergencia);
   }
 
   onSubmit(form) {
