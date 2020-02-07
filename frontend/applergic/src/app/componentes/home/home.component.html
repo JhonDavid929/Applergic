@@ -35,15 +35,14 @@
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
-        <div class="barra_superior">
-            <button class="desplegable" (click)="opened=!opened"><img src="../../../assets/imagenes/home/menAzul@2x.png"
-                    height="30px" width="30px"></button>
-            <img src="../../../assets/imagenes/home/gris.png"  height="32px" width="32px">
+        <div class ="barra_superior">
+            <button class="desplegable" (click)="opened=!opened"><img src ="../../../assets/imagenes/home/menAzul@2x.png" height="30px" width="30px"></button>
+            <img src = "../../../assets/imagenes/home/gris@2x.png" height="27px" width="27px" >
         </div>
         <!--A PARTIR DE AQUÍ, Y HASTA EL PRÓXIMO COMENTARIO, ES LO QUE TÚ TENÍAS, GRECIA-->
         <div class="main-content">
             <img class="logo" src="assets/imagenes/home/logoApplergicFinal.png" alt="Logo Home">
-            <button class="main-home-button scanner-button">
+            <button routerLink="/escaner" style="background-color: rgb(38, 199,220)" class="main-home-button">
                 <div class="button-content">
                     <img class="button-img" src="assets/imagenes/home/barcode2.png" alt="" width="56" height="56">
                     <span>Escanear</span>

@@ -10,11 +10,13 @@ export class HomeComponent implements OnInit {
 
   public usuarioLogado: Usuario;
 
-  constructor() { 
- 
+  constructor() {
+
   }
 
   ngOnInit() {
+    let user = JSON.parse(sessionStorage.getItem("usuario"));
+    //console.log(user.nombre)
     this.usuarioLogado = JSON.parse(sessionStorage.getItem("usuario"))
     console.log(this.usuarioLogado)
   }

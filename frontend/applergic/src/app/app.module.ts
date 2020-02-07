@@ -28,8 +28,7 @@ import { ResultadoServicio } from './servicios/resultadoServicio';
 import { EscanerComponent } from './componentes/escaner/escaner.component';
 import { ConfirmacionAlergiasComponent} from './componentes/confirmacion-alergias/confirmacion-alergias.component'
 import { LectorQrNFCComponent } from './componentes/lector-qr-nfc/lector-qr-nfc.component';
-import { ResultadoComponent } from './componentes/resultado/resultado.component';
-import { ResultadoService } from './servicios/resultado.service';
+import { DespedidaComponent } from './componentes/despedida/despedida.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +48,7 @@ import { ResultadoService } from './servicios/resultado.service';
     ConfirmacionAlergiasComponent,
     ResultadoEscanerComponent,
     LectorQrNFCComponent,
-    ResultadoComponent
+    DespedidaComponent
 
   ],
   imports: [

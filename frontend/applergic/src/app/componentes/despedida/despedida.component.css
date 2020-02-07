@@ -1,0 +1,110 @@
+.divVolver{
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 1em;
+}
+.volver{
+  font-family: 'Montserrat';
+  font-size: .9em;
+  color: rgb(38, 199, 220);
+  text-decoration: none;
+  margin: 1em 0;
+}
+.volver:hover {
+  cursor: pointer;
+}
+.back-arrow {
+  font-weight: lighter;
+  vertical-align: middle;
+  color: rgb(38, 199, 220);
+}
+
+.back-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  margin-top: 110pt;
+
+}
+
+.titulo{
+  font-family: 'Montserrat Bold', arial;
+  text-align: center;
+  font-size: 16pt;
+  margin-top: 2em;
+}
+.divSubtitutlo{
+  margin: 10px auto 0 auto;
+  width: 200px;
+}
+.subTitulo{
+  font-family: 'Montserrat Bold', arial;
+  text-align: center;
+  font-size: 16pt;
+  margin-top: 13pt;
+}
+/*------------------------  ESTILOS PARA ESTRELLAS------------------------------*/
+.stars{
+  margin: 2em auto;
+  display: flex;
+  width: 300px;
+
+}
+.rating {
+  margin: 0 auto;
+  border: none;
+  justify-content: center;
+}
+
+.rating:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+  clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+  float:right;
+  width:1em;
+  padding:0.1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:200%;
+  line-height:1.2;
+  color:#ddd;
+}
+
+.rating:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.rating > input:checked ~ label {
+  color: #f70;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+
+
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #ea0;
+}
+.enviar-valoracion{
+  display: flex;
+  flex-direction: column;
+}
+.valoracion{
+  font-family: 'Montserrat';
+  font-size: 14pt;
+  margin: 2.5em auto;
+  color: #26c7dc;
+  text-decoration: none;
+
+}

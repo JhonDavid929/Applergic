@@ -13,6 +13,7 @@ import { ResultadoEscanerComponent } from './componentes/resultado-escaner/resul
 import { EscanerComponent } from './componentes/escaner/escaner.component';
 import { ConfirmacionAlergiasComponent } from './componentes/confirmacion-alergias/confirmacion-alergias.component';
 import { LectorQrNFCComponent } from './componentes/lector-qr-nfc/lector-qr-nfc.component';
+import { DespedidaComponent } from './componentes/despedida/despedida.component';
 import { ResultadoComponent } from './componentes/resultado/resultado.component';
 
 const routerOptions: ExtraOptions = {
@@ -83,6 +84,10 @@ const routes: Routes = [
   {
     path: 'resultado',
     component: ResultadoComponent
+  },
+  {
+    path: 'despedida',
+    component:DespedidaComponent
   }
 ];
 
