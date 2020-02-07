@@ -76,9 +76,7 @@ export class ConfiguracionAlergiasComponent implements OnInit {
   }
 
   goToConfirmAllergies() {
-    if (this.hasSelectedAlergies()) {
-      this.router.navigate(['/confirmacion-alergias']);
-    }
+    this.router.navigate(['/confirmacion-alergias']);
   }
 }
 
