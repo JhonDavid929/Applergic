@@ -13,9 +13,9 @@ import { Usuario } from 'src/app/entidades/usuario';
 export class CrearEmergenciaComponent implements OnInit {
 
   titulo: string = "Vamos a añadir tu contacto en caso de emergencia.";
-  public personaEmergencia: PersonaEmergencia;
+  public personaEmergencia;
   valido: boolean;
-  public usuarioRegistrado: Usuario;
+  public usuarioRegistrado;
 
 
   constructor(private emergenciaServicio: PersonaEmergenciaServicio, private router: Router) { 
@@ -28,25 +28,21 @@ export class CrearEmergenciaComponent implements OnInit {
       compania: "",
       poliza: ""
     }
-    this.usuarioRegistrado = {
-      "_id": "",
-      nombre: "",
-      email: "",
-      movil: "",
-      password: "",
-      imagen: "",
-      alimentos: [],
-      }
+    this.usuarioRegistrado = ""
   }
 
   ngOnInit() {
-    let user = JSON.parse(sessionStorage.getItem("user"));
-    console.log(user.usuario);
-    this.personaEmergencia.usuario = user.usuario;
-    console.log(this.personaEmergencia);
+    //let user = JSON.parse(sessionStorage.getItem("user"));
+    // this.usuarioRegistrado = JSON.parse(sessionStorage.getItem("user"))
+    // console.log(this.usuarioRegistrado.usuario)
+    // this.personaEmergencia.usuario = this.usuarioRegistrado.usuario;
+    // console.log(this.personaEmergencia);
   }
 
   onSubmit(form) {
+    this.usuarioRegistrado = JSON.parse(sessionStorage.getItem("user"))
+    console.log(this.usuarioRegistrado.usuario)
+    this.personaEmergencia.usuario = this.usuarioRegistrado.usuario;
     this.emergenciaServicio.crearPersona(this.personaEmergencia);
     this.router.navigate(['alergias']);
   }

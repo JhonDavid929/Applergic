@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 
 export class CrearUsuarioComponent {
   titulo: string = "Dinos quien eres";
-  public usuarioNuevo: Usuario;
+  public usuarioNuevo;
   valido: boolean;
 
   constructor(private usuarioServicio: UsuarioServicio, private router: Router){
@@ -29,8 +29,15 @@ export class CrearUsuarioComponent {
       }
   }
 
+  ngOnInit(){
+    console.log(this.usuarioNuevo)
+    //sessionStorage.removeItem("usuario");
+  }
+
   onSubmit(form) {
     this.usuarioServicio.crearUsuario(this.usuarioNuevo)
+    //sessionStorage.setItem("user", JSON.stringify(this.usuarioNuevo));
+    console.log("Creado"+this.usuarioNuevo)
     this.router.navigate(['emergencia']);
   }
 

@@ -1,4 +1,5 @@
 export class PersonaEmergencia{
+  public _id: String;
   public usuario: string;
   public nombre: string;
   public email: string;

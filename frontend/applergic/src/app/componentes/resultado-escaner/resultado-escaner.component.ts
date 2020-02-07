@@ -32,10 +32,7 @@ export class ResultadoEscanerComponent implements OnInit {
 
   pintarVistas() {
 
-    //let apto;
-    //alert(this.producto.ingredientes.length);
-
-    if ( !this.producto) {
+    if (!this.producto) {
       this.vistaApto = 3;
     } else {
       let existe = false;
