@@ -36,10 +36,10 @@ export class CrearEmergenciaComponent implements OnInit {
 
   onSubmit(form) {
     this.usuarioRegistrado = JSON.parse(sessionStorage.getItem("user"))
-    console.log(this.usuarioRegistrado.usuario)
+    console.log(this.usuarioRegistrado.usuario._id)
     this.personaEmergencia.usuario = this.usuarioRegistrado.usuario;
     this.emergenciaServicio.crearPersona(this.personaEmergencia);
-    this.router.navigate(['alergias']);
+    this.router.navigate(['login']);
   }
 
   alPerderFoco() {

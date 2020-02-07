@@ -23,7 +23,7 @@ function recibirDatosRegistroPost(req, res){
         console.log("Se ha registrado en base de datos ");
 
         res.status(200).json({
-            usuario: Usuario._id
+            usuario: Usuario
         })
     })
     promesaGuardado.catch(err =>{
