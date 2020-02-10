@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/entidades/usuario';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   public usuarioLogado: Usuario;
 
-  constructor() {
+  constructor(private router: Router) {
 
   }
 
@@ -19,6 +20,14 @@ export class HomeComponent implements OnInit {
     //console.log(user.nombre)
     this.usuarioLogado = JSON.parse(sessionStorage.getItem("usuario"))
     console.log(this.usuarioLogado)
+  }
+
+  logOut(){
+    sessionStorage.removeItem("usuario");
+    if(typeof sessionStorage.removeItem("usuario") === undefined){
+      console.log("Bye bye");
+    }
+    this.router.navigate(['/inicio']);
   }
 
 }
