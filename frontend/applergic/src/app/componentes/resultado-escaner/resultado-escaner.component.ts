@@ -45,7 +45,7 @@ export class ResultadoEscanerComponent implements OnInit {
       }
       if (existe) {
         // Si no coincide ninguno, se puede comer
-        this.vistaApto = 2;
+        // this.vistaApto = 2;
       } else {
         // Si coincide alguno, NO se puede comer
         this.vistaApto = 1;
